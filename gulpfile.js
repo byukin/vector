@@ -48,19 +48,19 @@ gulp.task('stylus', function () {
 
 
 gulp.task('shorthand', function () {
-    gulp.src('./css/style.css')
+    gulp.src(path.master.css)
         .pipe(shorthand())
         .on('error', console.log)
-        .pipe(gulp.dest('master/style/css'))
+        .pipe(gulp.dest(path.master.css))
         .pipe(livereload());
 });
 
 gulp.task('cssmin', function () {
-    gulp.src('./master/style/css/style.css')
+    gulp.src(path.master.css)
         .pipe(cssmin())
 		.on('error', console.log)
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('master/style/css'));
+        .pipe(gulp.dest(path.master.css));
 });
 
 
@@ -76,24 +76,24 @@ gulp.task('jade', function () {
 });
 
 gulp.task('autoprefixer', function () {
-    gulp.src('./master/style/css/style.css')
+    gulp.src(path.master.css)
          .pipe(autoprefixer({
             browsers: ['last 10 versions'],
             cascade: false
         }))
         .on('error', console.log)
-        .pipe(gulp.dest('master/style/css'))
+        .pipe(gulp.dest(path.master.css))
         .pipe(livereload());
 });
 
 gulp.task('base64', function () {
-    gulp.src('./master/style/css/style.css')
+    gulp.src(path.master.css)
          .pipe(base64({
-            baseDir: "./master/style/img",
+            baseDir: path.master.img,
             extensionsAllowed: ['.gif', '.png']
         }))
         .on('error', console.log)
-        .pipe(gulp.dest('master/style/css'))
+        .pipe(gulp.dest(path.master.css))
         .pipe(livereload());
 });
 
