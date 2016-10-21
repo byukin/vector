@@ -18,7 +18,7 @@ var path = {
         fonts: 'master/style/fonts/'
     },
     src: { //Пути откуда брать исходники
-        html: 'src/*.html',
+        html: 'src/*.jade',
         js: 'src/js/main.js',
         css: 'src/style/css/style.styl',
         img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
@@ -102,10 +102,10 @@ gulp.task('base64', function () {
 
 gulp.task('watch', function(){
     livereload.listen();
-    gulp.watch('./src/*.jade',['jade']);
-    gulp.watch('./src/*.styl',['stylus']);
-    gulp.watch('./css/*.css',['autoprefixer']);
-	gulp.watch('./css/style.css',['cssmin']);
+    gulp.watch(path.src.html,['jade']);
+    gulp.watch(path.src.css,['stylus']);
+    gulp.watch(path.master.css,['autoprefixer']);
+	gulp.watch(path.master.css,['cssmin']);
 });
 
 
