@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename');
 
 var path = {
-    master: { //куда складывать готовые после сборки файлы
+    master: { //куда складывать собранные
         html: 'master/',
         js: 'master/js/',
         css: 'master/style/css/',
@@ -21,8 +21,8 @@ var path = {
         html: 'src/*.jade',
         js: 'src/js/main.js',
         css: 'src/style/css/style.styl',
-        img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
-        fonts: 'src/fonts/**/*.*'
+        img: 'src/style/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        fonts: 'src/style/fonts/**/*.*'
     },
 
 };
@@ -87,7 +87,7 @@ gulp.task('base64', function () {
     gulp.src(path.master.css)
          .pipe(base64({
             baseDir: path.master.img,
-            extensionsAllowed: ['.gif', '.png']
+            extensionsAllowed: ['.gif', '.png', '.jpg']
         }))
         .on('error', console.log)
         .pipe(gulp.dest(path.master.css))
