@@ -48,7 +48,7 @@ gulp.task('stylus', function () {
 });
 
 gulp.task('shorthand', function () {
-    gulp.src(path.master.css)
+    gulp.src('master/style/css/*.css')
         .pipe(shorthand())
         .on('error', console.log)
         .pipe(gulp.dest(path.master.css))
@@ -56,7 +56,7 @@ gulp.task('shorthand', function () {
 });
 
 gulp.task('cssmin', function () {
-    gulp.src(path.master.css)
+    gulp.src('master/style/css/*.css')
         .pipe(cssmin())
 		.on('error', console.log)
         .pipe(rename({suffix: '.min'}))
@@ -74,7 +74,7 @@ gulp.task('jade', function () {
 });
 
 gulp.task('autoprefixer', function () {
-    gulp.src(path.master.css)
+    gulp.src('master/style/css/*.css')
          .pipe(autoprefixer({
             browsers: ['last 10 versions'],
             cascade: false
@@ -85,7 +85,7 @@ gulp.task('autoprefixer', function () {
 });
 
 gulp.task('base64', function () {
-    gulp.src(path.master.css)
+    gulp.src('master/style/css/*.css')
          .pipe(base64({
             baseDir: path.master.img,
             extensionsAllowed: ['.gif', '.png', '.jpg']
@@ -97,7 +97,7 @@ gulp.task('base64', function () {
 
 gulp.task('htmlprettify', function() {
   gulp.src('master/*.html')
-    .pipe(htmlprettify({indent_char: ' ', indent_size: 4}))
+    .pipe(htmlprettify({indent_char: ' ', indent_size: '\t'}))
     .pipe(gulp.dest(path.master.html))
 });
 
