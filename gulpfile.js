@@ -97,7 +97,7 @@ gulp.task('base64', function () {
 
 gulp.task('htmlprettify', function() {
   gulp.src('master/*.html')
-    .pipe(htmlprettify({indent_char: ' ', indent_size: '\t'}))
+    .pipe(htmlprettify({indent_char: '\t', indent_size: '1'}))
     .pipe(gulp.dest(path.master.html))
 });
 
