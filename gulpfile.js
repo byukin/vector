@@ -46,7 +46,6 @@ gulp.task('stylus', function () {
         .pipe(livereload());
 });
 
-
 gulp.task('shorthand', function () {
     gulp.src(path.master.css)
         .pipe(shorthand())
@@ -62,8 +61,6 @@ gulp.task('cssmin', function () {
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(path.master.css));
 });
-
-
 
 gulp.task('jade', function () {
     gulp.src(path.src.html)
