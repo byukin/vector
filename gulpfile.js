@@ -66,12 +66,12 @@ gulp.task('cssmin', function () {
 
 
 gulp.task('jade', function () {
-    gulp.src('./src/*.jade')
+    gulp.src(path.src.html)
         .pipe(jade({
               pretty: true
             }))
         .on('error', console.log)
-        .pipe(gulp.dest('master'))
+        .pipe(gulp.dest(path.master.html))
         .pipe(livereload());
 });
 
