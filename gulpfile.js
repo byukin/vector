@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     base64 = require('gulp-css-base64'),
     livereload = require('gulp-livereload'),
 	cssmin = require('gulp-cssmin'),
+	htmlprettify = require('gulp-html-prettify'),
 	rename = require('gulp-rename');
 
 var path = {
@@ -94,7 +95,11 @@ gulp.task('base64', function () {
         .pipe(livereload());
 });
 
-
+gulp.task('htmlprettify', function() {
+  gulp.src('master/*.html')
+    .pipe(htmlprettify({indent_char: ' ', indent_size: 4}))
+    .pipe(gulp.dest(path.master.html))
+});
 
 
 gulp.task('watch', function(){
