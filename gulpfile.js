@@ -29,7 +29,7 @@ var path = {
 
 
 gulp.task('webserver', ['watch'], function() {
-  gulp.src('./master')
+  gulp.src('./')
     .pipe(webserver({
       livereload: true,
       directoryListing: true,
