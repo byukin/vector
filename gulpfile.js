@@ -65,7 +65,7 @@ gulp.task('cssmin', function () {
 gulp.task('jade', function () {
     gulp.src(path.src.html)
         .pipe(jade({
-              pretty: true
+              pretty: '\t'
             }))
         .on('error', console.log)
         .pipe(gulp.dest(path.master.html))
