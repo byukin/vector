@@ -2,16 +2,53 @@ html
 	head
 		title
 		link(href="style/css/style.css",rel="stylesheet")
+		link(href="http://webfonts.ru/import/bender.css", rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,600&amp;subset=cyrillic-ext", rel="stylesheet")
 	body
-		.header
-			.header__logo
-				.logo
-					a(href="").logo__link
-						img(src="").logo__img
-			.header__description
-				span.header__description_colored Профессиональные бизнес-услуги
-				| для предприятий и частных лиц в Орле
-			.header__contacts
-				img(src=).header__phoneicon
+		section.head
+			.layout
+				.header.clearfix
+					.header-logo
+						a(href="/").header-logo__link
+							img(src="./style/img/logo.svg", title="Логотип", alt="Логотип").header-logo__img
+					.header-description
+						span.header-description_blue Профессиональные бизнес-услуги
+						|для&nbsp;предприятий и&nbsp;частных лиц в&nbsp;Орле
+					.header-contacts
+						.header-contacts__img
+						.header-contacts__text Бесплатная консультация по&nbsp;телефону
+						.header-contacts__phone
+							span.header__phone_gray + 7 4862
+							| 40-30-20
+					.header-submit
+						button.header-submit__button Проконсультироваться
+				.menu.clearfix
+					ul
+						li.menu__item
+							a(href="#").menu__link Бухгалтерские услуги
+							ul.submenu
+								li.submenu__item
+									a(href="#").submenu__link Составление отчетности
+								li.submenu__item
+									a(href="#").submenu__link Выбор системы налогообложения
+								li.submenu__item
+									a(href="#").submenu__link Приходящий бухгалтер
+						li.menu__item
+							a(href="#").menu__link Юридические услуги
+						li.menu__item
+							a(href="#").menu__link Печати и штампы
+						li.menu__item
+							a(href="#").menu__link Бизнес услуги
+						li.menu__item
+							a(href="#").menu__link О компании
+						li.menu__item
+							a(href="#").menu__link Акции
+						li.menu__item
+							a(href="#").menu__link Контакты
+		section.slider
+			.layout 1
+
+
+
 
 

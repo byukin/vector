@@ -1,4 +1,233 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: ubuntu;
+  font-size: 14px;
+  line-height: 24px;
+}
+.layout {
+  max-width: 1230px;
+  min-width: 1024px;
+  margin: 0 auto;
+  padding: 30px;
+  box-sizing: border-box;
+  position: relative;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+/* ------------- Шапка ---------------*/
+section.head {
+  background-image: url("../img/dots.png");
+}
+.header-logo {
+  float: left;
+  width: 10%;
+  margin-right: 4%;
+}
+.header-logo__img {
+  width: 100px;
+}
+.header-description {
+  float: left;
+  width: 31%;
+  margin-right: 5%;
+  font-family: bender;
+  font-size: 19px;
+  line-height: 28px;
+  color: #666;
+}
+.header-description_blue {
+  font-weight: bold;
+  color: #317fb4;
+}
+.header-contacts {
+  width: 29%;
+  float: left;
+  margin-top: 5px;
+  height: 30px;
+  font-family: 'Exo 2';
+  font-weight: 100;
+}
+.header-contacts__img {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  background: url("../img/phoneicon.png");
+  margin-right: 15px;
+}
+.header-contacts__text {
+  font-family: exolight;
+  font-size: 15px;
+}
+.header-contacts__phone {
+  font-family: exosemibold;
+  font-size: 20px;
+  line-height: 30px;
+}
+.header__phone_gray {
+  color: #999;
+  font-family: exoregular;
+}
+.header-submit {
+  width: 200px;
+  float: right;
+  margin-top: 7px;
+}
+.header-submit__button {
+  width: 200px;
+  background: #317fb4;
+  font-family: exomedium;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 20px 10px 20px;
+  font-size: 13px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/* ------------- Меню ---------------*/
+.menu {
+  margin-top: 30px;
+  padding-top: 5px;
+  margin-bottom: -20px;
+  border-top: 1px solid #999;
+}
+.menu__item {
+  text-transform: uppercase;
+  font-family: exosemibold;
+  font-size: 16px;
+  line-height: 56px;
+  float: left;
+  display: block;
+  margin-right: 48px;
+}
+.menu__item:hover .submenu {
+  display: block;
+  opacity: 1;
+  transition-duration: 1s;
+}
+.menu__item:last-child {
+  margin-right: 0;
+}
+.submenu {
+  display: none;
+  opacity: 0;
+  z-index: 100;
+  transition-duration: 1s;
+  position: absolute;
+  background: #317fb4;
+  max-width: 300px;
+}
+.submenu:before {
+  content: "";
+  display: block;
+  margin-left: 20px;
+  margin-top: -7px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-style: solid;
+  border-width: 0 7px 7px 7px;
+  border-color: transparent transparent #317fb4 transparent;
+}
+.submenu__item {
+  color: #fff;
+  font-family: ubuntu;
+  text-transform: none;
+  display: block;
+  font-size: 15px;
+  line-height: 23px;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  padding: 8px 15px 8px 15px;
+}
+.submenu__item:last-child {
+  border: none;
+}
+.submenu__link {
+  color: #fff;
+}
+/* ------------- Слайдер ---------------*/
+section.slider {
+  height: 340px;
+  background-image: url("../img/dots.png");
+}
+section.slider:before {
+  background-image: url("../img/lines.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 340px;
+  margin-top: -160px;
+}
+/* ------------- Шрифты ---------------*/
+@font-face {
+  font-family: 'exobold';
+  src: url("../fonts/exo2.0-bold-webfont.woff2") format('woff2'), url("../fonts/exo2.0-bold-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'exolight';
+  src: url("../fonts/exo2.0-light-webfont.woff2") format('woff2'), url("../fonts/exo2.0-light-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'exomedium';
+  src: url("../fonts/exo2.0-medium-webfont.woff2") format('woff2'), url("../fonts/exo2.0-medium-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'exoregular';
+  src: url("../fonts/exo2.0-regular-webfont.woff2") format('woff2'), url("../fonts/exo2.0-regular-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'exosemibold';
+  src: url("../fonts/exo2.0-semibold-webfont.woff2") format('woff2'), url("../fonts/exo2.0-semibold-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ubuntubold';
+  src: url("../fonts/ubuntu-b-webfont.woff2") format('woff2'), url("../fonts/ubuntu-b-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ubunturegular';
+  src: url("../fonts/ubuntu-r-webfont.woff2") format('woff2'), url("../fonts/ubuntu-r-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ubuntulight';
+  src: url("../fonts/Ubuntu Light Regular.eot");
+  src: url("../fonts/Ubuntu Light Regular.eot?#iefix") format('embedded-opentype'), url("../fonts/Ubuntu Light Regular.woff2") format('woff2'), url("../fonts/Ubuntu Light Regular.woff") format('woff'), url("../fonts/Ubuntu Light Regular.svg#Ubuntu Light Regular") format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+000D-E000;
 }
