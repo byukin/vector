@@ -45,7 +45,7 @@ h2 {
 }
 /* ------------- Шапка ---------------*/
 section.head {
-  background-image: url("../img/dots.png");
+  background: url("../img/dots.png");
 }
 .header-logo {
   float: left;

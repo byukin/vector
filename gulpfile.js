@@ -85,9 +85,9 @@ gulp.task('autoprefixer', function () {
 });
 
 gulp.task('base64', function () {
-    gulp.src('master/style/css/*.css')
+    gulp.src('master/style/css/style.css')
          .pipe(base64({
-            baseDir: path.master.img,
+            baseDir: "master/style/img/",
             extensionsAllowed: ['.gif', '.png', '.jpg']
         }))
         .on('error', console.log)
