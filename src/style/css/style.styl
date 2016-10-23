@@ -579,6 +579,268 @@ section.reasons
 	padding-left 80px
 	display block
 
+
+/* ------------- Отзывы ---------------*/
+
+section.feedback
+	background-image url(../img/dots.png)
+.feedback__title
+	font-family bender
+	font-weight bold
+	font-size 27px
+	color #000
+	text-transform uppercase
+	letter-spacing 6px
+	text-align center
+.feedback__title:before
+	position absolute
+	content ""
+	width 27%
+	border-top 1px solid rgba(0,0,0,0.2)
+	top 71px;
+	display block
+.feedback__title:after
+	position absolute
+	content ""
+	width 27%
+	right 30px
+	border-top 1px solid rgba(0,0,0,0.2)
+	top 71px;
+	display block
+.feedback-all
+	display block
+	width 15%
+	margin 0 auto
+	margin-top 15px
+	text-align center
+.feedback-all:before
+	content ""
+	width 10px
+	height 10px
+	position absolute
+	background url(../img/cross.png)
+	display inline-block
+	background-repeat no-repeat
+	margin-left -17px
+	margin-top 8px
+.feedback-all:after
+	content ""
+	width 10px
+	height 10px
+	position absolute
+	background url(../img/cross.png)
+	display inline-block
+	background-repeat no-repeat
+	margin-left 7px
+	margin-top 8px
+.feedback-all__link
+	font-family bender
+	color #8ba0be
+	font-size 12px
+	letter-spacing 2px
+	text-transform uppercase
+	text-align center
+.fakebackground:before
+	content ""
+	position absolute
+	top:0
+	height 100%
+	background #e2ebf2
+	width 50%
+	left 0
+	right 0
+	margin auto
+	z-index -1
+	-moz-transform: skewX(-15deg);
+	-webkit-transform: skewX(-15deg);
+	-o-transform: skewX(-15deg);
+	-ms-transform: skewX(-15deg);
+	transform: skewX(-15deg);
+.feedback-list
+	margin-top 40px
+	margin-bottom 40px
+.feedback-list__item
+	width 49%
+	float left
+	background #fff
+	padding 30px
+	box-sizing border-box
+	box-shadow 0px 2px 13px 0px rgba(0, 0, 0, 0.07)
+.feedback-list__item:nth-child(2n)
+	float right
+.feedback-list__photo
+	width 135px
+	height 135px
+	border-radius 135px
+	overflow hidden
+	float left
+	margin-right 30px
+	position relative
+.feedback-list__img
+	height 100%
+.feedback-list__name
+	font-size 16px
+	color $bluecolor
+.feedback-list__info
+	font-size 13px
+	color #666
+.feedback-list__text
+	font-size 15px
+	margin-top 10px
+	font-style italic
+	font-weight 300
+	line-height 23px
+	color #666
+	height 92px
+	overflow hidden
+	text-overflow ellipsis
+.feedback-list__more
+	border 1px solid #8c8c8c
+	padding 3px 13px 3px 13px
+	display inline-block
+	margin-left 165px
+	margin-top 15px
+.feedback-list__link
+	text-transform uppercase
+	color #8c8c8c
+	font-weight 200
+	font-size 11px
+
+/* ------------- Новости --------------*/
+
+
+
+.news__title
+	font-family bender
+	font-weight bold
+	font-size 27px
+	color #000
+	text-transform uppercase
+	letter-spacing 6px
+	text-align center
+.news__title:before
+	position absolute
+	content ""
+	width 32%
+	border-top 1px solid rgba(0,0,0,0.15)
+	top 71px;
+	display block
+.news__title:after
+	position absolute
+	content ""
+	width 32%
+	right 30px
+	border-top 1px solid rgba(0,0,0,0.15)
+	top 71px;
+	display block
+.news-all
+	display block
+	width 15%
+	margin 0 auto
+	margin-top 15px
+	text-align center
+.news-all:before
+	content ""
+	width 10px
+	height 10px
+	position absolute
+	background url(../img/cross.png)
+	display inline-block
+	background-repeat no-repeat
+	margin-left -17px
+	margin-top 8px
+.news-all:after
+	content ""
+	width 10px
+	height 10px
+	position absolute
+	background url(../img/cross.png)
+	display inline-block
+	background-repeat no-repeat
+	margin-left 7px
+	margin-top 8px
+.news-all__link
+	font-family bender
+	color #8ba0be
+	font-size 12px
+	letter-spacing 2px
+	text-transform uppercase
+	text-align center
+
+.news-list
+	margin-top 40px
+	margin-bottom 40px
+.news-list__item
+	width 33.33333333333%
+	float left
+	padding-right 10px
+	box-sizing border-box
+.news-list__day
+	display inline-block
+	font-family exoregular
+	background $bluecolor
+	padding 6px 10px 6px 10px
+	color #fff
+	margin-right 10px
+.news-list__month
+	display inline-block
+	font-family exolight
+	text-transform uppercase
+	letter-spacing 1px
+	font-size 12px
+	color #999999
+.news-list__content
+	display block
+	padding-left 32px
+	border-left 1px solid #ccc
+	margin-left 18px
+.news-list__link
+	color $bluecolor
+	line-height 23px
+.news-list__text
+	font-size 15px
+	line-height 23px
+	font-weight 300
+.news-list__year
+	color #999999
+	font-family exolight
+	letter-spacing 1px
+	margin-left 5px
+	font-size 12px
+	font-weight 300
+	margin-top 5px
+
+/* ------------ СЕО-текст -------------*/
+
+section.seotext
+	background-image url(../img/seobackground.png)/*base64:skip*/
+	background-size cover
+	background-position center center
+	background-repeat no-repeat
+.seotext__title
+	font-family bender
+	font-weight bold
+	font-size 30px
+	margin-top 40px
+	color #fff
+	text-align center
+.seotext__title:after
+	content ""
+	width 100px
+	border-top:2px solid #fff
+	margin 0 auto
+	display block
+	margin-top 40px
+	margin-bottom 40px
+.seotext__text
+	width 70%
+	line-height 28px
+	display block
+	margin 0 auto
+	color #fff
+	font-weight 300
+	margin-bottom 70px
+
 /* ------------- Шрифты ---------------*/
 
 @font-face {
