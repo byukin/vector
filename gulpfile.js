@@ -108,7 +108,6 @@ gulp.task('watch', function(){
     gulp.watch(path.src.html,['jade']);
     gulp.watch(path.src.css,['stylus']);
     gulp.watch(path.master.css,['autoprefixer']);
-	gulp.watch(path.master.css,['cssmin']);
 });
 
 
