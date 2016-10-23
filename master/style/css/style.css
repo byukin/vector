@@ -255,6 +255,7 @@ section.info {
   background-image: url("../img/lines.svg");
   background-size: contain;
   background-repeat: repeat-y;
+  background-position: 0px 400px;
 }
 .maininfo__title {
   font-family: bender;
@@ -265,7 +266,7 @@ section.info {
   color: #317fb4;
 }
 .maininfo__text {
-  font-weight: 300;
+  font-weight: light;
   line-height: 28px;
   max-width: 70%;
   margin: 0 auto;
@@ -350,7 +351,7 @@ section.compare {
   display: block;
 }
 .compare__text {
-  font-weight: 300;
+  font-weight: light;
   line-height: 28px;
   max-width: 50%;
   margin: 0 auto;
@@ -418,7 +419,7 @@ section.compare {
   background: #32d5cb;
 }
 .compare-item__result {
-  font-weight: 300;
+  font-weight: light;
   text-align: center;
   display: inline-block;
   width: 80%;
@@ -531,7 +532,7 @@ section.specialists {
 }
 .specialists-list__info {
   margin-top: 15px;
-  font-weight: 300;
+  font-weight: light;
   color: #a0abba;
 }
 .specialists-list__submit {
@@ -589,6 +590,11 @@ section.reasons {
 .reasons-list {
   margin-top: 60px;
   margin-bottom: 60px;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  -o-column-count: 2;
+}
+column-count: 2 {
   column-count: 2;
 }
 .reasons-list__item {
@@ -611,7 +617,7 @@ section.reasons {
   width: 60px;
   height: 60px;
   position: relative;
-  background: url("../img/reason2.svg");
+  background-image: url("../img/reason2.svg");
   background-repeat: no-repeat;
   float: left;
   margin-right: 20px;
@@ -642,7 +648,7 @@ section.reasons {
 .reasons-list__text {
   font-size: 15px;
   line-height: 24px;
-  font-weight: 300;
+  font-weight: light;
   padding-left: 80px;
   display: block;
 }
@@ -769,7 +775,7 @@ section.feedback {
   font-size: 15px;
   margin-top: 10px;
   font-style: italic;
-  font-weight: 300;
+  font-weight: light;
   line-height: 23px;
   color: #666;
   height: 92px;
@@ -892,7 +898,7 @@ section.feedback {
 .news-list__text {
   font-size: 15px;
   line-height: 23px;
-  font-weight: 300;
+  font-weight: light;
 }
 .news-list__year {
   color: #999;
@@ -900,7 +906,7 @@ section.feedback {
   letter-spacing: 1px;
   margin-left: 5px;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: light;
   margin-top: 5px;
 }
 /* ------------ СЕО-текст -------------*/
@@ -933,7 +939,7 @@ section.seotext {
   display: block;
   margin: 0 auto;
   color: #fff;
-  font-weight: 300;
+  font-weight: light;
   margin-bottom: 70px;
 }
 /* --------- Меню в подвале -----------*/
@@ -1019,7 +1025,7 @@ section.footer {
 .footer-info__mail {
   color: #a6d3f1;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: light;
 }
 .footer-info__adress {
   color: #fff;
@@ -1028,7 +1034,7 @@ section.footer {
 .footer-info__link {
   color: #a6d3f1;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: light;
 }
 .footer-info__social {
   margin-left: 30px;
@@ -1054,7 +1060,7 @@ section.footer {
   margin-top: 25px;
   font-size: 13px;
   line-height: 18px;
-  font-weight: 300;
+  font-weight: light;
 }
 .footer-info__devlink_blue {
   color: #317fb4;

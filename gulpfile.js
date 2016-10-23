@@ -102,6 +102,12 @@ gulp.task('htmlprettify', function() {
     .pipe(gulp.dest(path.master.html))
 });
 
+gulp.task('svg2png', function () {
+    gulp.src('master/style/img/*.svg')
+        .pipe(svg2png())
+        .pipe(gulp.dest('master'));
+});
+
 
 gulp.task('watch', function(){
     livereload.listen();
