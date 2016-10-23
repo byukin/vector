@@ -91,6 +91,7 @@ gulp.task('base64', function () {
             extensionsAllowed: ['.gif', '.png', '.jpg']
         }))
         .on('error', console.log)
+		.pipe(rename({suffix: '.base64'}))
         .pipe(gulp.dest(path.master.css))
         .pipe(livereload());
 });
