@@ -1,13 +1,13 @@
 $max-width = 1230px
 $min-width = 1024px
 $bluecolor = #317fb4
-
+$edit = #c2fcc4
 
 body
 	padding 0
 	margin 0
 	font-family ubuntu
-	font-size 14px
+	font-size 16px
 	line-height 24px
 
 .layout
@@ -33,6 +33,16 @@ ul,li
 a
 	text-decoration none
 	color #000
+	&:hover
+		color red
+h1
+	font-size 30px;
+	line-height 36px;
+	font-weight normal
+h2
+	font-size 17px
+	line-height 23px
+	font-weight normal
 /* ------------- Шапка ---------------*/
 
 section.head
@@ -61,8 +71,6 @@ section.head
 	float left
 	margin-top 5px
 	height 30px
-	font-family 'Exo 2'
-	font-weight 100
 .header-contacts__img
 	display block
 	float left
@@ -107,13 +115,13 @@ section.head
 .menu
 	margin-top 30px
 	padding-top 5px
-	margin-bottom -20px
 	border-top 1px solid #999
+	padding-top 20px
 .menu__item
 	text-transform uppercase
 	font-family exosemibold
 	font-size 16px
-	line-height 56px
+	height 50px
 	float left
 	display block
 	margin-right 48px
@@ -127,6 +135,7 @@ section.head
 	display none
 	opacity 0
 	z-index 100
+	margin-top 15px
 	transition-duration 1s
 	position absolute
 	background $bluecolor
@@ -171,7 +180,404 @@ section.slider:before
 	width 100%
 	height 340px
 	margin-top -160px
+.mainslider
+	margin-top -65px
 
+
+.owl-next
+	position absolute
+	top 0
+	bottom 0
+	right 20px
+	margin auto
+	width 48px
+	height 48px
+	opacity .5
+	background-image url(../img/next.png)
+	&:hover
+		opacity .9
+.owl-prev
+	position absolute
+	top 0
+	bottom 0
+	left 20px
+	margin auto
+	width 48px
+	height 48px
+	opacity .5
+	background-image url(../img/prev.png)
+	&:hover
+		opacity .9
+
+.owl-pagination
+	position absolute
+	z-index 1000
+	top:80%
+	left:60%
+.owl-page
+	background #fff
+	display inline-block
+	margin-right 7px
+	width 10px;
+	height 10px;
+	border-radius 10px
+.owl-page.active
+	background #2a6991
+.owl-item
+	width 100%
+.mainslider__item
+	width 100%
+.mainslider__img
+	width 100%
+
+/* ------------- Осн. инфо ---------------*/
+
+section.info
+	background-image url(../img/lines.svg)
+	background-size contain
+	background-repeat repeat-y
+.maininfo__title
+	font-family bender
+	font-weight bold
+	text-align center
+.maininfo__title_blue
+	color $bluecolor
+.maininfo__text
+	font-weight 300
+	line-height 28px
+	max-width 70%
+	margin 0 auto
+	text-align center
+.maininfo-cat
+	margin-top 60px
+	margin-left -15px
+	margin-right -15px
+.maininfo-cat__item
+	width 25%
+	height 250px
+	padding 15px
+	float left
+	box-sizing border-box
+	position relative
+.maininfo-cat__thumbnail
+	max-height 150px
+	overflow hidden
+.maininfo-cat__img
+	width 100%
+	display inline-block
+	vertical-align middle
+.maininfo-submit
+	border 1px solid #aaa
+	height 180px
+	box-sizing border-box
+.maininfo-submit__text
+	display block
+	max-width 90%
+	text-align center
+	margin 0 auto
+	margin-top 30px
+.maininfo-submit__button
+	width 200px
+	background $bluecolor
+	font-family exomedium
+	border none
+	color #fff
+	text-transform uppercase
+	padding 10px 20px 10px 20px
+	font-size 13px
+	box-sizing border-box
+	border-radius 3px
+	cursor pointer
+	margin 0 auto
+	display block
+	margin-top 20px
+
+/* -------- Cравнение затрат ----------*/
+
+section.compare
+	background-image url(../img/dots.png)
+.compare__title
+	font-family bender
+	font-weight bold
+	text-transform uppercase
+	letter-spacing 6px
+	text-align center
+.compare__title:before
+	position absolute
+	content ""
+	width 28%
+	border-top 1px solid #ccc
+	top 70px;
+	display block
+.compare__title:after
+	position absolute
+	content ""
+	width 28%
+	right 30px
+	border-top 1px solid #ccc
+	top 70px;
+	display block
+.compare__text
+	font-weight 300
+	line-height 28px
+	max-width 50%
+	margin 0 auto
+	text-align center
+.compare-item
+	width 50%
+	margin-top 40px
+	padding-left 50px
+	float left
+	border-right 1px dashed #ccc
+	box-sizing border-box
+	&:last-child
+		border none
+.compare-item__title
+	margin-top 30px
+	font-family bender
+	font-size 20px
+	letter-spacing 2px
+	font-weight bold
+	text-transform uppercase
+	color $bluecolor
+.compare-item__graph
+	display block
+	margin-top 30px
+	width 50%
+	margin-right 5%
+	float left
+.compare-item__description
+	float left
+	width 45%
+	margin-top 60px
+.compare-item__list
+	display block
+.compare-item__list:before
+	content ""
+	display inline-block
+	width 5px
+	height 5px
+	vertical-align middle
+	background #000
+	margin-right 10px
+	margin-top -3px
+	transform: rotate(45deg);
+.compare-item__list:nth-child(1):before
+	background #329bd3
+.compare-item__list:nth-child(2):before
+	background #ebb200
+.compare-item__list:nth-child(3):before
+	background #d55489
+.compare-item__list:nth-child(4):before
+	background #a299df
+.compare-item__list:nth-child(5):before
+	background #32d5cb
+
+.compare-item__result
+	font-weight 300
+	text-align center
+	display inline-block
+	width 80%
+	clear both
+	margin 0 auto
+	margin-top 30px
+.compare-item__price
+	font-size 27px
+	padding-bottom 60px
+	color #a2a2a2
+	text-align center
+	font-family exolight
+	margin-top 30px
+	width 80%
+
+/* -------- Специалисты ----------*/
+
+section.specialists
+	background-image url(../img/dots_dark.png)
+.specialists__title
+	font-family bender
+	font-size 27px
+	color #fff
+	text-transform uppercase
+	letter-spacing 6px
+	text-align center
+.specialists__title:before
+	position absolute
+	content ""
+	width 28%
+	border-top 1px solid rgba(255,255,255,0.4)
+	top 70px;
+	display block
+.specialists__title:after
+	position absolute
+	content ""
+	width 28%
+	right 30px
+	border-top 1px solid rgba(255,255,255,0.4)
+	top 70px;
+	display block
+.specialists-all
+	display block
+	width 15%
+	margin 0 auto
+	margin-top 15px
+	text-align center
+.specialists-all:before
+	content ""
+	width 10px
+	height 10px
+	position absolute
+	background url(../img/cross.png)
+	display inline-block
+	background-repeat no-repeat
+	margin-left -17px
+	margin-top 8px
+.specialists-all:after
+	content ""
+	width 10px
+	height 10px
+	position absolute
+	background url(../img/cross.png)
+	display inline-block
+	background-repeat no-repeat
+	margin-left 7px
+	margin-top 8px
+.specialists-all__link
+	font-family bender
+	color #8ba0be
+	font-size 12px
+	letter-spacing 2px
+	text-transform uppercase
+	text-align center
+.specialists-list
+	margin-top 40px
+	margin-bottom 40px
+.specialists-list__item
+	width 33.333333333333%
+	text-align center
+	float left
+	box-sizing border-box
+	border-right 1px dashed rgba(255,255,255,0.3)
+	&:last-child
+		border none
+.specialists-photo
+	width 170px
+	height 170px
+	margin 0 auto
+	border-radius 170px
+	overflow hidden
+.specialists-list__img
+	height 100%
+.specialists-list__name
+	margin-top 25px
+	color #fff
+.specialists-list__info
+	margin-top 15px
+	font-weight 300
+	color #a0abba
+.specialists-list__submit
+	width 200px
+	background $bluecolor
+	font-family exomedium
+	border none
+	color #fff
+	text-transform uppercase
+	padding 10px 20px 10px 20px
+	font-size 13px
+	box-sizing border-box
+	border-radius 3px
+	cursor pointer
+	margin 0 auto
+	bottom 0
+	display block
+	margin-top 20px
+
+
+/* ------------ Причины --------------*/
+
+section.reasons
+	background-image url(../img/lines.svg)
+	background-repeat no-repeat
+	background-position 0 -300px
+.reasons__title
+	font-family bender
+	font-weight bold
+	font-size 27px
+	color #000
+	text-transform uppercase
+	letter-spacing 6px
+	text-align center
+.reasons__title:before
+	position absolute
+	content ""
+	width 21%
+	border-top 1px solid rgba(0,0,0,0.4)
+	top 71px;
+	display block
+.reasons__title:after
+	position absolute
+	content ""
+	width 21%
+	right 30px
+	border-top 1px solid rgba(0,0,0,0.4)
+	top 71px;
+	display block
+.reasons__title_blue
+	color $bluecolor
+.reasons-list
+	margin-top 60px
+	margin-bottom 60px
+	column-count: 2;
+.reasons-list__item
+
+	padding 15px
+	padding-right 30px
+	box-sizing border-box
+	display inline-block
+	position relative
+.reasons-list__icon_one
+	width 60px
+	height 60px
+	position relative
+	background url(../img/reason1.svg)
+	background-repeat no-repeat
+	float left
+	margin-right 20px
+.reasons-list__icon_two
+	width 60px
+	height 60px
+	position relative
+	background url(../img/reason2.svg)
+	background-repeat no-repeat
+	float left
+	margin-right 20px
+.reasons-list__icon_three
+	width 60px
+	height 80px
+	position relative
+	background url(../img/reason3.svg)
+	background-repeat no-repeat
+	float left
+	margin-right 20px
+.reasons-list__icon_four
+	width 60px
+	height 60px
+	position relative
+	background url(../img/reason4.svg)
+	background-repeat no-repeat
+	float left
+	margin-right 20px
+
+.reasons-list__title
+	color $bluecolor
+	font-size 18px
+	line-height 27px
+.reasons-list__text
+	font-size 15px
+	line-height 24px
+	font-weight 300
+	padding-left 80px
+	display block
 
 /* ------------- Шрифты ---------------*/
 

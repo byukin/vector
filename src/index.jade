@@ -3,7 +3,14 @@ html
 		title
 		link(href="style/css/style.css",rel="stylesheet")
 		link(href="http://webfonts.ru/import/bender.css", rel="stylesheet")
-		link(href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,600&amp;subset=cyrillic-ext", rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Ubuntu:200,300,400,500,600&amp;subset=cyrillic-ext", rel="stylesheet")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+		script(src="js/owl-carousel/owl.carousel.js")
+		link(href="js/owl-carousel/owl.carousel.css", rel="stylesheet")
+		//link(href="js/owl-carousel/owl.theme.css", rel="stylesheet")
+
+		script(src="js/main.js")
+
 	body
 		section.head
 			.layout
@@ -12,13 +19,13 @@ html
 						a(href="/").header-logo__link
 							img(src="./style/img/logo.svg", title="Логотип", alt="Логотип").header-logo__img
 					.header-description
-						span.header-description_blue Профессиональные бизнес-услуги
+						span.header-description_blue Профессиональные бизнес-услуги&ensp;
 						|для&nbsp;предприятий и&nbsp;частных лиц в&nbsp;Орле
 					.header-contacts
 						.header-contacts__img
 						.header-contacts__text Бесплатная консультация по&nbsp;телефону
 						.header-contacts__phone
-							span.header__phone_gray + 7 4862
+							span.header__phone_gray + 7 4862&ensp;
 							| 40-30-20
 					.header-submit
 						button.header-submit__button Проконсультироваться
@@ -46,7 +53,180 @@ html
 						li.menu__item
 							a(href="#").menu__link Контакты
 		section.slider
-			.layout 1
+			.layout
+				.mainslider
+					div.mainslider__item
+						img(src="./uploads/img/slide1.png").mainslider__img
+					div.mainslider__item
+						img(src="./uploads/img/slide1.png").mainslider__img
+					div.mainslider__item
+						img(src="./uploads/img/slide1.png").mainslider__img
+		section.info
+			.layout
+				.maininfo
+					h1.maininfo__title
+						span.maininfo__title_blue Компания Вектор
+						=' '
+						|&mdash; комплексное сопровождение бизнеса
+					.maininfo__text.
+						Компания «Вектор» предоставляет весь спектр бухгалтерских и юридических услуг.<br>
+						Наша цель — обеспечить комфортные условия для старта и развития Вашего бизнеса,<br>
+						достичь максимальных количественных и качественных показателей.
+					.maininfo-cat.clearfix
+						.maininfo-cat__item
+							.maininfo-cat__thumbnail
+								a(href="")
+									img(src="./uploads/img/info1.png" alt="" title="").maininfo-cat__img
+							.maininfo-cat__title
+								h2.maininfo-cat__title
+									a(href="#").maininfo-cat__link Бухгалтерское сопровождение
+						.maininfo-cat__item
+							.maininfo-cat__thumbnail
+									a(href="")
+										img(src="./uploads/img/info2.png" alt="" title="").maininfo-cat__img
+								.maininfo-cat__title
+									h2.maininfo-cat__title
+										a(href="#").maininfo-cat__link Регистрация ООО / ИП
+						.maininfo-cat__item
+							.maininfo-cat__thumbnail
+									a(href="")
+										img(src="./uploads/img/info3.png" alt="" title="").maininfo-cat__img
+								.maininfo-cat__title
+									h2.maininfo-cat__title
+										a(href="#").maininfo-cat__link Изготоволение печатей и&nbsp;штампов
+						.maininfo-cat__item
+							.maininfo-cat__thumbnail
+									a(href="")
+										img(src="./uploads/img/info4.png" alt="" title="").maininfo-cat__img
+								.maininfo-cat__title
+									h2.maininfo-cat__title
+										a(href="#").maininfo-cat__link Алкогольная декларация
+						.maininfo-cat__item
+							.maininfo-cat__thumbnail
+									a(href="")
+										img(src="./uploads/img/info5.png" alt="" title="").maininfo-cat__img
+								.maininfo-cat__title
+									h2.maininfo-cat__title
+										a(href="#").maininfo-cat__link Ликвидация юридического лица
+						.maininfo-cat__item
+							.maininfo-cat__thumbnail
+									a(href="")
+										img(src="./uploads/img/info6.png" alt="" title="").maininfo-cat__img
+								.maininfo-cat__title
+									h2.maininfo-cat__title
+										a(href="#").maininfo-cat__link Консультация по выбору системы налогообложения
+						.maininfo-cat__item
+							.maininfo-cat__thumbnail
+									a(href="")
+										img(src="./uploads/img/info7.png" alt="" title="").maininfo-cat__img
+								.maininfo-cat__title
+									h2.maininfo-cat__title
+										a(href="#").maininfo-cat__link Внесение изменений в&nbsp;учредительные документы
+						.maininfo-cat__item
+							.maininfo-cat__thumbnail
+									a(href="")
+										img(src="./uploads/img/info8.png" alt="" title="").maininfo-cat__img
+								.maininfo-cat__title
+									h2.maininfo-cat__title
+										a(href="#").maininfo-cat__link Составление и сдача отчетности в налоговую и фонды
+						.maininfo-cat__item
+							.maininfo-cat__thumbnail
+									a(href="")
+										img(src="./uploads/img/info9.png" alt="" title="").maininfo-cat__img
+								.maininfo-cat__title
+									h2.maininfo-cat__title
+										a(href="#").maininfo-cat__link Создание сайтов
+						.maininfo-cat__item
+							.maininfo-cat__thumbnail
+									a(href="")
+										img(src="./uploads/img/info10.png" alt="" title="").maininfo-cat__img
+								.maininfo-cat__title
+									h2.maininfo-cat__title
+										a(href="#").maininfo-cat__link Брендинг
+						.maininfo-cat__item
+							.maininfo-cat__thumbnail
+									a(href="")
+										img(src="./uploads/img/info11.png" alt="" title="").maininfo-cat__img
+								.maininfo-cat__title
+									h2.maininfo-cat__title
+										a(href="#").maininfo-cat__link Составление бизнес-планов
+						.maininfo-cat__item
+							.maininfo-submit
+								.maininfo-submit__text Проконсультируйтесь по&nbsp;услугам подробнее
+								button.maininfo-submit__button Проконсультироваться
+		section.compare
+			.layout.clearfix
+				h1.compare__title Сравнение затрат
+				.compare__text Предлагаем Вам сравнить стоимость содержания штатного бухгалтера и&nbsp;стоимость бухгалтерского сопровождения в нашей компании.
+				.compare-item
+					.compare-item__title Штатный бухгалтер
+					img(src="./uploads/img/graph1.png" alt="" title="").compare-item__graph
+					.compare-item__description
+						ul
+							li.compare-item__list Заработная плата
+							li.compare-item__list Отчисления в фонды
+							li.compare-item__list Правовые программы
+							li.compare-item__list Обслуживание 1С
+							li.compare-item__list Канцтовары
+					.compare-item__result Итого, ежемесячные затраты на содержание штатного <b>бухгалтера обойдутся вам в 23 000 руб</b>.
+					.compare-item__price -23 000 руб.
+				.compare-item
+					.compare-item__title Штатный бухгалтер
+					img(src="./uploads/img/graph2.png" alt="" title="").compare-item__graph
+					.compare-item__description
+						ul
+							li.compare-item__list Ведение бухгалтерского учета
+							li.compare-item__list Кадровый учет и расчет заработной платы
+							li.compare-item__list Ваша экономия
+					.compare-item__result Итого, использование бухгалтерского аутсорсинга <b>сэкономит вам 15 600 руб</b>.
+					.compare-item__price + 15 600 руб.
+		section.specialists
+			.layout
+				h1.specialists__title Наши специалисты
+				.specialists-all
+					a(href="#").specialists-all__link Все специалисты
+				.specialists-list.clearfix
+					.specialists-list__item
+						.specialists-photo
+							img(src="./uploads/img/spec1.png" alt="" title="").specialists-list__img
+						.specialists-list__name Мария Петрововна Скрябина
+						.specialists-list__info Главный специалист отдела бухгалтерского сопровождения
+						.specialists-list__submit Проконсультироваться
+					.specialists-list__item
+						.specialists-photo
+							img(src="./uploads/img/spec2.png" alt="" title="").specialists-list__img
+						.specialists-list__name Илья Васильевич Ноздрин
+						.specialists-list__info Юридическое сопровождение<br>компаний
+						.specialists-list__submit Проконсультироваться
+					.specialists-list__item
+						.specialists-photo
+							img(src="./uploads/img/spec3.png" alt="" title="").specialists-list__img
+						.specialists-list__name Павел Семенович Васильев
+						.specialists-list__info Изготовление печатей <br> и&nbsp;штампов
+						.specialists-list__submit Проконсультироваться
+		section.reasons
+			.layout
+				h1.reasons__title 4 причины
+					=" "
+					span.reasons__title_blue позвонить нам
+				.reasons-list.clearfix
+					.reasons-list__item
+						.reasons-list__icon_one
+						.reasons-list__title Ответственность за Вашу бухгалтерию теперь на нас!
+						.reasons-list__text Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине. Мы работаем по договору, поэтому мы несем ответственность в соответствии с гражданским кодексом, а не трудовым.Мы работаем по договору, поэтому мы несем ответственность в соответствии с гражданским кодексом, а не трудовым.
+					.reasons-list__item
+						.reasons-list__icon_two
+						.reasons-list__title Ответственность за Вашу бухгалтерию теперь на нас!
+						.reasons-list__text Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине. Мы работаем по договору, поэтому мы несем ответственность в соответствии с гражданским кодексом, а не трудовым.
+					.reasons-list__item
+						.reasons-list__icon_three
+						.reasons-list__title Ответственность за Вашу бухгалтерию теперь на нас!
+						.reasons-list__text Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине. Мы работаем по договору, поэтому мы несем ответственность в соответствии с гражданским кодексом, а не трудовым.
+					.reasons-list__item
+						.reasons-list__icon_four
+						.reasons-list__title Ответственность за Вашу бухгалтерию теперь на нас!
+						.reasons-list__text Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине. Мы работаем по договору, поэтому мы несем ответственность в соответствии с гражданским кодексом, а не трудовым.
+
 
 
 
