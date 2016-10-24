@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 24px;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
@@ -43,8 +43,13 @@ h1 {
   font-weight: normal;
 }
 h2 {
-  font-size: 17px;
-  line-height: 23px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: normal;
+}
+h3 {
+  font-size: 16px;
+  line-height: 24px;
   font-weight: normal;
 }
 /* ------------- Шапка ---------------*/
@@ -61,23 +66,24 @@ section.head {
 }
 .header-description {
   float: left;
-  width: 31%;
+  width: 30%;
   margin-right: 5%;
+}
+.header-description__text {
   font-family: bender;
   font-size: 19px;
   line-height: 25px;
   color: #666;
 }
-.header-description_blue {
+.header-description__text_blue {
   font-weight: bold;
   color: #317fb4;
 }
 .header-contacts {
-  width: 29%;
-  float: left;
-  margin-top: 5px;
-  height: 30px;
   font-family: 'Exo 2';
+  width: 30%;
+  float: left;
+  margin-top: 15px;
 }
 .header-contacts__icon {
   display: block;
@@ -93,7 +99,6 @@ section.head {
 .header-contacts__phone {
   font-size: 20px;
   line-height: 30px;
-  font-family: 'Exo 2';
 }
 .header-contacts__phone_gray {
   color: #999;
@@ -101,7 +106,7 @@ section.head {
 .header-submit {
   width: 200px;
   float: right;
-  margin-top: 7px;
+  margin-top: 20px;
 }
 .header-submit__button {
   width: 200px;
@@ -125,15 +130,20 @@ section.head {
   padding-top: 20px;
 }
 .menu__item {
-  height: 50px;
+  height: 40px;
   float: left;
-  display: block;
-  margin-right: 45px;
+  white-space: nowrap;
+  margin-right: 4%;
+  transition-duration: 0.4s;
 }
 .menu__item:hover .submenu {
   display: block;
   opacity: 1;
-  transition-duration: 1s;
+}
+@media (max-width: 1225px) {
+  .menu__item {
+    margin-right: 3%;
+  }
 }
 .menu__item:last-child {
   margin-right: 0;
@@ -143,6 +153,13 @@ section.head {
   font-family: 'Exo 2';
   font-weight: 600;
   font-size: 16px;
+}
+.menu__link_hide {
+  text-transform: uppercase;
+  font-family: 'Exo 2';
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
 }
 .submenu {
   display: none;
@@ -180,11 +197,11 @@ section.head {
   color: #fff;
 }
 /* ------------- Слайдер ---------------*/
-section.slider {
-  height: 340px;
+section.main-slider {
   background-image: url("../img/dots.png");
+  position: relative;
 }
-section.slider:before {
+section.main-slider:before {
   background-image: url("../img/lines.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -192,11 +209,66 @@ section.slider:before {
   position: absolute;
   z-index: -1;
   width: 100%;
-  height: 500px;
-  margin-top: -260px;
+  height: 100%;
+  margin-top: -160px;
 }
-.mainslider {
-  margin-top: -65px;
+.slider {
+  margin-top: -50px;
+}
+.slider__splash {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  top: 0;
+  right: -60px;
+  background: rgba(45,126,181,0.6);
+  -moz-transform: skewX(-15deg);
+  -webkit-transform: skewX(-15deg);
+  -o-transform: skewX(-15deg);
+  -ms-transform: skewX(-15deg);
+  transform: skewX(-15deg);
+}
+.slider__description {
+  position: absolute;
+  left: 55%;
+  top: 20%;
+  font-family: 'Exo 2';
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #fff;
+}
+.slider__description_left {
+  position: absolute;
+  left: 10%;
+  top: 35%;
+  font-family: 'Exo 2';
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #fff;
+}
+.slider__text {
+  text-transform: uppercase;
+}
+.slider__subtext {
+  font-weight: 300;
+}
+.slider__more {
+  padding: 10px 15px 10px 15px;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 19px;
+  color: #fff;
+  margin-top: 30px;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+}
+.slider__more:hover {
+  background: #fff;
+  color: #317fb4;
 }
 .owl-next {
   position: absolute;
@@ -229,7 +301,7 @@ section.slider:before {
 .owl-pagination {
   position: absolute;
   z-index: 1000;
-  top: 80%;
+  top: 85%;
   left: 60%;
 }
 .owl-page {
@@ -241,7 +313,7 @@ section.slider:before {
   border-radius: 10px;
 }
 .owl-page.active {
-  background: #2a6991;
+  background: #1b5397;
 }
 .owl-item {
   width: 100%;
@@ -286,6 +358,7 @@ section.info {
   float: left;
   box-sizing: border-box;
   position: relative;
+  overflow: hidden;
 }
 .maininfo-cat__thumbnail {
   max-height: 150px;
@@ -293,8 +366,7 @@ section.info {
 }
 .maininfo-cat__img {
   width: 100%;
-  display: inline-block;
-  vertical-align: middle;
+  height: auto;
 }
 .maininfo-submit {
   border: 1px solid #c7c7c7;
@@ -787,7 +859,7 @@ section.feedback {
   text-overflow: ellipsis;
 }
 .feedback-list__more {
-  border: 1px solid #8c8c8c;
+  border: 1px solid #ccc;
   padding: 3px 13px 3px 13px;
   display: inline-block;
   margin-left: 165px;
@@ -900,7 +972,7 @@ section.feedback {
   color: #317fb4;
 }
 .news-list__text {
-  font-weight: light;
+  font-weight: 300;
 }
 .news-list__year {
   color: #999;
@@ -953,12 +1025,24 @@ section.seotext {
   height: 50px;
   float: left;
   display: block;
-  margin-right: 48px;
+  margin-right: 4%;
+  transition-duration: 0.4s;
+}
+@media (max-width: 1225px) {
+  .footer-menu__item {
+    margin-right: 3%;
+  }
 }
 .footer-menu__item:last-child {
   margin-right: 0;
 }
 .footer-menu__link {
+  text-transform: uppercase;
+  font-family: 'Exo 2';
+  font-weight: 600;
+  font-size: 16px;
+}
+.footer-menu__link_hide {
   text-transform: uppercase;
   font-family: 'Exo 2';
   font-weight: 600;
@@ -1032,7 +1116,6 @@ section.footer {
 }
 .footer-info__adress {
   color: #fff;
-  font-size: 15px;
 }
 .footer-info__link {
   color: #a6d3f1;
@@ -1064,11 +1147,14 @@ section.footer {
   line-height: 17px;
   font-weight: 300;
 }
-.footer-info__devlink_blue {
+.footer-info__link_dev {
   color: #317fb4;
+  font-weight: 400;
 }
 /* ------------- Шрифты ---------------*/
 /*
+
+
 @font-face {
     font-family: 'exobold';
     src: url('../fonts/exo2.0-bold-webfont.woff2') format('woff2'),
@@ -1081,85 +1167,8 @@ section.footer {
 
 
 
-@font-face {
-    font-family: 'exolight';
-    src: url('../fonts/exo2.0-light-webfont.woff2') format('woff2'),
-         url('../fonts/exo2.0-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 
 
 
-@font-face {
-    font-family: 'exomedium';
-    src: url('../fonts/exo2.0-medium-webfont.woff2') format('woff2'),
-         url('../fonts/exo2.0-medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'exoregular';
-    src: url('../fonts/exo2.0-regular-webfont.woff2') format('woff2'),
-         url('../fonts/exo2.0-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'exosemibold';
-    src: url('../fonts/exo2.0-semibold-webfont.woff2') format('woff2'),
-         url('../fonts/exo2.0-semibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'ubuntubold';
-    src: url('../fonts/ubuntu-b-webfont.woff2') format('woff2'),
-         url('../fonts/ubuntu-b-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'ubunturegular';
-    src: url('../fonts/ubuntu-r-webfont.woff2') format('woff2'),
-         url('../fonts/ubuntu-r-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family:'ubuntulight';
-    src: url('../fonts/Ubuntu Light Regular.eot');
-	src: url('../fonts/Ubuntu Light Regular.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Ubuntu Light Regular.woff2') format('woff2'),
-		url('../fonts/Ubuntu Light Regular.woff') format('woff'),
-		url('../fonts/Ubuntu Light Regular.svg#Ubuntu Light Regular') format('svg');
-    font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-    unicode-range: U+000D-E000;
-}
 */

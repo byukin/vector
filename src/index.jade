@@ -20,8 +20,9 @@ html
 						a(href="/").header-logo__link
 							img(src="./style/img/logo.svg", title="Логотип", alt="Логотип").header-logo__img
 					.header-description
-						span.header-description_blue Профессиональные бизнес-услуги&ensp;
-						|для&nbsp;предприятий и&nbsp;частных лиц в&nbsp;Орле
+						h1.header-description__text
+							span.header-description__text_blue Профессиональные бизнес-услуги&ensp;
+							|для&nbsp;предприятий и&nbsp;частных лиц в&nbsp;Орле
 					.header-contacts
 						.header-contacts__icon
 						.header-contacts__text Бесплатная консультация по&nbsp;телефону
@@ -44,7 +45,7 @@ html
 						li.menu__item
 							a(href="#").menu__link Юридические услуги
 						li.menu__item
-							a(href="#").menu__link Печати и штампы
+							a(href="#").menu__link.link_hide Печати и штампы
 						li.menu__item
 							a(href="#").menu__link Бизнес услуги
 						li.menu__item
@@ -53,19 +54,27 @@ html
 							a(href="#").menu__link Акции
 						li.menu__item
 							a(href="#").menu__link Контакты
-		section.slider
+		section.main-slider
 			.layout
-				.mainslider
-					div.mainslider__item
-						img(src="./uploads/img/slide1.png").mainslider__img
-					div.mainslider__item
-						img(src="./uploads/img/slide1.png").mainslider__img
-					div.mainslider__item
-						img(src="./uploads/img/slide1.png").mainslider__img
+				.slider
+					div.slider__item
+						.slider__splash
+						.slider__description_left
+							.slider__text Специальная акция
+							.slider__subtext до 31 декабря 2016 года
+						.slider__description
+							.slider__text Приходящий бухгалтер
+							.slider__subtext за 500 рублей в месяц
+							a(href="").slider__more Подробнее
+						img(src="./uploads/img/slide3.png").mainslider__img
+					div.slider__item
+						img(src="./uploads/img/slide3.png").mainslider__img
+					div.slider__item
+						img(src="./uploads/img/slide3.png").mainslider__img
 		section.info
 			.layout
 				.maininfo
-					h1.maininfo__title
+					h2.maininfo__title
 						span.maininfo__title_blue Компания Вектор
 						=' '
 						|&mdash; комплексное сопровождение бизнеса
@@ -79,85 +88,85 @@ html
 								a(href="")
 									img(src="./uploads/img/info1.png" alt="" title="").maininfo-cat__img
 							.maininfo-cat__title
-								h2.maininfo-cat__title
+								h3.maininfo-cat__title
 									a(href="#").maininfo-cat__link Бухгалтерское сопровождение
 						.maininfo-cat__item
 							.maininfo-cat__thumbnail
-									a(href="")
-										img(src="./uploads/img/info2.png" alt="" title="").maininfo-cat__img
-								.maininfo-cat__title
-									h2.maininfo-cat__title
-										a(href="#").maininfo-cat__link Регистрация ООО / ИП
+								a(href="")
+									img(src="./uploads/img/info2.png" alt="" title="").maininfo-cat__img
+							.maininfo-cat__title
+								h3.maininfo-cat__title
+									a(href="#").maininfo-cat__link Регистрация ООО / ИП
 						.maininfo-cat__item
 							.maininfo-cat__thumbnail
-									a(href="")
-										img(src="./uploads/img/info3.png" alt="" title="").maininfo-cat__img
-								.maininfo-cat__title
-									h2.maininfo-cat__title
-										a(href="#").maininfo-cat__link Изготоволение печатей и&nbsp;штампов
+								a(href="")
+									img(src="./uploads/img/info3.png" alt="" title="").maininfo-cat__img
+							.maininfo-cat__title
+								h3.maininfo-cat__title
+									a(href="#").maininfo-cat__link Изготоволение печатей и&nbsp;штампов
 						.maininfo-cat__item
 							.maininfo-cat__thumbnail
-									a(href="")
-										img(src="./uploads/img/info4.png" alt="" title="").maininfo-cat__img
-								.maininfo-cat__title
-									h2.maininfo-cat__title
-										a(href="#").maininfo-cat__link Алкогольная декларация
+								a(href="")
+									img(src="./uploads/img/info4.png" alt="" title="").maininfo-cat__img
+							.maininfo-cat__title
+								h3.maininfo-cat__title
+									a(href="#").maininfo-cat__link Алкогольная декларация
 						.maininfo-cat__item
 							.maininfo-cat__thumbnail
-									a(href="")
-										img(src="./uploads/img/info5.png" alt="" title="").maininfo-cat__img
-								.maininfo-cat__title
-									h2.maininfo-cat__title
-										a(href="#").maininfo-cat__link Ликвидация юридического лица
+								a(href="")
+									img(src="./uploads/img/info5.png" alt="" title="").maininfo-cat__img
+							.maininfo-cat__title
+								h3.maininfo-cat__title
+									a(href="#").maininfo-cat__link Ликвидация юридического лица
 						.maininfo-cat__item
 							.maininfo-cat__thumbnail
-									a(href="")
-										img(src="./uploads/img/info6.png" alt="" title="").maininfo-cat__img
-								.maininfo-cat__title
-									h2.maininfo-cat__title
-										a(href="#").maininfo-cat__link Консультация по выбору системы налогообложения
+								a(href="")
+									img(src="./uploads/img/info6.png" alt="" title="").maininfo-cat__img
+							.maininfo-cat__title
+								h3.maininfo-cat__title
+									a(href="#").maininfo-cat__link Консультация по выбору системы налогообложения
 						.maininfo-cat__item
 							.maininfo-cat__thumbnail
-									a(href="")
-										img(src="./uploads/img/info7.png" alt="" title="").maininfo-cat__img
-								.maininfo-cat__title
-									h2.maininfo-cat__title
-										a(href="#").maininfo-cat__link Внесение изменений в&nbsp;учредительные документы
+								a(href="")
+									img(src="./uploads/img/info7.png" alt="" title="").maininfo-cat__img
+							.maininfo-cat__title
+								h3.maininfo-cat__title
+									a(href="#").maininfo-cat__link Внесение изменений в&nbsp;учредительные документы
 						.maininfo-cat__item
 							.maininfo-cat__thumbnail
-									a(href="")
-										img(src="./uploads/img/info8.png" alt="" title="").maininfo-cat__img
-								.maininfo-cat__title
-									h2.maininfo-cat__title
-										a(href="#").maininfo-cat__link Составление и сдача отчетности в налоговую и фонды
+								a(href="")
+									img(src="./uploads/img/info8.png" alt="" title="").maininfo-cat__img
+							.maininfo-cat__title
+								h3.maininfo-cat__title
+									a(href="#").maininfo-cat__link Составление и сдача отчетности в налоговую и фонды
 						.maininfo-cat__item
 							.maininfo-cat__thumbnail
-									a(href="")
-										img(src="./uploads/img/info9.png" alt="" title="").maininfo-cat__img
-								.maininfo-cat__title
-									h2.maininfo-cat__title
-										a(href="#").maininfo-cat__link Создание сайтов
+								a(href="")
+									img(src="./uploads/img/info9.png" alt="" title="").maininfo-cat__img
+							.maininfo-cat__title
+								h3.maininfo-cat__title
+									a(href="#").maininfo-cat__link Создание сайтов
 						.maininfo-cat__item
 							.maininfo-cat__thumbnail
-									a(href="")
-										img(src="./uploads/img/info10.png" alt="" title="").maininfo-cat__img
-								.maininfo-cat__title
-									h2.maininfo-cat__title
-										a(href="#").maininfo-cat__link Брендинг
+								a(href="")
+									img(src="./uploads/img/info10.png" alt="" title="").maininfo-cat__img
+							.maininfo-cat__title
+								h3.maininfo-cat__title
+									a(href="#").maininfo-cat__link Брендинг
 						.maininfo-cat__item
 							.maininfo-cat__thumbnail
-									a(href="")
-										img(src="./uploads/img/info11.png" alt="" title="").maininfo-cat__img
-								.maininfo-cat__title
-									h2.maininfo-cat__title
-										a(href="#").maininfo-cat__link Составление бизнес-планов
+								a(href="")
+									img(src="./uploads/img/info11.png" alt="" title="").maininfo-cat__img
+							.maininfo-cat__title
+								h3.maininfo-cat__title
+									a(href="#").maininfo-cat__link Составление бизнес-планов
 						.maininfo-cat__item
 							.maininfo-submit
 								.maininfo-submit__text Проконсультируйтесь по&nbsp;услугам подробнее
 								button.maininfo-submit__button Проконсультироваться
 		section.compare
 			.layout.clearfix
-				h1.compare__title Сравнение затрат
+				h2.compare__title Сравнение затрат
 				.compare__text Предлагаем Вам сравнить стоимость содержания штатного бухгалтера и&nbsp;стоимость бухгалтерского сопровождения в нашей компании.
 				.compare-item
 					.compare-item__title Штатный бухгалтер
@@ -183,7 +192,7 @@ html
 					.compare-item__price + 15 600 руб.
 		section.specialists
 			.layout
-				h1.specialists__title Наши специалисты
+				h2.specialists__title Наши специалисты
 				.specialists-all
 					a(href="#").specialists-all__link Все специалисты
 				.specialists-list.clearfix
@@ -207,14 +216,14 @@ html
 						.specialists-list__submit Проконсультироваться
 		section.reasons
 			.layout
-				h1.reasons__title 4 причины
+				h2.reasons__title 4 причины
 					=" "
 					span.reasons__title_blue позвонить нам
 				.reasons-list.clearfix
 					.reasons-list__item
 						.reasons-list__icon_one
 						.reasons-list__title Ответственность за Вашу бухгалтерию теперь на нас!
-						.reasons-list__text Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине. Мы работаем по договору, поэтому мы несем ответственность в соответствии с гражданским кодексом, а не трудовым.Мы работаем по договору, поэтому мы несем ответственность в соответствии с гражданским кодексом, а не трудовым.
+						.reasons-list__text Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине. Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине.
 					.reasons-list__item
 						.reasons-list__icon_two
 						.reasons-list__title Ответственность за Вашу бухгалтерию теперь на нас!
@@ -229,7 +238,7 @@ html
 						.reasons-list__text Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине. Мы работаем по договору, поэтому мы несем ответственность в соответствии с гражданским кодексом, а не трудовым.
 		section.feedback
 			.layout.fakebackground
-				h1.feedback__title Отзывы клиентов
+				h2.feedback__title Отзывы клиентов
 				.feedback-all
 					a(href="#").feedback-all__link Все отзывы
 				.feedback-list.clearfix
@@ -251,7 +260,7 @@ html
 							a(href="").feedback-list__link Читать полностью
 		section.news
 			.layout
-				h1.news__title Новости
+				h2.news__title Новости
 				.news-all
 					a(href="#").news-all__link Все новости
 				.news-list.clearfix
@@ -278,7 +287,7 @@ html
 						.news-list__year 2016
 		section.seotext
 			.layout
-				h1.seotext__title Копмлексное обслуживание ООО и ИП
+				h2.seotext__title Копмлексное обслуживание ООО и ИП
 				.seotext__text Комплексное обслуживание ООО и ИП в Орле — одна из наших основных специализаций. Опыт, знания, выработанныегодами методы решения задач и специалисты высшего уровня – залог успешной работы вашей будущей компании. Собираетесь ли вы зарегистрировать ООО или ИП или уже являетесь владельцев своего собственного бизнеса вы получаете высококлассное обслуживание за доступные средства. А заключая договор на бухгалтерские обслуживание с нашей компанией вы будете экономить средства на зарплату штатного сотрудника, организации его рабочего места, социальных выплатах, отпусках, больничных. В своей работе по оказанию бухгалтерских и юридических услуг для бизнеса мы ориентируемся на комплексный подход к выполнению задач плодотворное сотрудничество с представителями различных компаний, сфер и структур.
 
 		section.up-footer
@@ -290,7 +299,7 @@ html
 						li.footer-menu__item
 							a(href="#").footer-menu__link Юридические услуги
 						li.footer-menu__item
-							a(href="#").footer-menu__link Печати и штампы
+							a(href="#").footer-menu__link.link_hide Печати и штампы
 						li.footer-menu__item
 							a(href="#").footer-menu__link Бизнес услуги
 						li.footer-menu__item
@@ -315,7 +324,7 @@ html
 					.footer-info__dev
 						.footer-info__devlogo
 						.footer-info__devlink Создание сайта:<br>
-							a(href="").footer-info__devlink_blue «ОрелСайтСтрой»
+							a(href="").footer-info__link_dev «ОрелСайтСтрой»
 
 
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
