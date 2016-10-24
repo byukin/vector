@@ -3,12 +3,19 @@ $min-width = 1024px
 $bluecolor = #317fb4
 $edit = #c2fcc4
 
+
+
+
 body
 	padding 0
 	margin 0
-	font-family ubuntu
+	font-family 'Ubuntu', sans-serif
 	font-size 16px
-	line-height 24px
+	line-height 22px
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
 
 .layout
 	max-width $max-width
@@ -66,7 +73,7 @@ section.head
 	margin-right 5%
 	font-family bender
 	font-size 19px
-	line-height 28px
+	line-height 25px
 	color #666
 .header-description_blue
 	font-weight bold
@@ -77,26 +84,23 @@ section.head
 	float left
 	margin-top 5px
 	height 30px
-.header-contacts__img
+	font-family 'Exo 2'
+.header-contacts__icon
 	display block
 	float left
 	width 50px
 	height 50px
 	background url(../img/phoneicon.png)
 	margin-right 15px
-
 .header-contacts__text
-	font-family exolight
-	font-size 15px;
-
-
+	font-size 15px
 .header-contacts__phone
-	font-family exosemibold
-	font-size 20px;
-	line-height 30px;
-.header__phone_gray
+	font-size 20px
+	line-height 30px
+	font-family 'Exo 2'
+.header-contacts__phone_gray
 	color #999
-	font-family exoregular
+
 
 
 .header-submit
@@ -106,7 +110,8 @@ section.head
 .header-submit__button
 	width 200px
 	background $bluecolor
-	font-family exomedium
+	font-family 'Exo 2'
+	font-weight 500
 	border none
 	color #fff
 	text-transform uppercase
@@ -133,7 +138,7 @@ section.head
 	height 50px
 	float left
 	display block
-	margin-right 48px
+	margin-right 45px
 	&:hover .submenu
 		display block
 		opacity 1
@@ -142,7 +147,8 @@ section.head
 	margin-right 0
 .menu__link
 	text-transform uppercase
-	font-family exosemibold
+	font-family 'Exo 2'
+	font-weight 600
 	font-size 16px
 .submenu
 	display none
@@ -166,11 +172,8 @@ section.head
 	border-color: transparent transparent $bluecolor transparent;
 .submenu__item
 	color #fff
-	font-family ubuntu
 	text-transform none
 	display block
-	font-size 15px
-	line-height 23px
 	border-bottom 1px solid rgba(255,255,255,0.4)
 	padding 8px 15px 8px 15px
 .submenu__item:last-child
@@ -196,8 +199,8 @@ section.slider:before
 	position absolute
 	z-index -1
 	width 100%
-	height 340px
-	margin-top -160px
+	height 500px
+	margin-top -260px
 .mainslider
 	margin-top -65px
 
@@ -303,7 +306,8 @@ section.info
 .maininfo-submit__button
 	width 200px
 	background $bluecolor
-	font-family exomedium
+	font-family 'Exo 2'
+	font-weight 500
 	border none
 	color #fff
 	text-transform uppercase
@@ -416,7 +420,8 @@ section.compare
 	padding-bottom 60px
 	color #a2a2a2
 	text-align center
-	font-family exolight
+	font-family 'Exo 2'
+	font-weight 300
 	margin-top 30px
 	width 80%
 
@@ -514,7 +519,8 @@ section.specialists
 .specialists-list__submit
 	width 200px
 	background $bluecolor
-	font-family exomedium
+	font-family 'Exo 2'
+	font-weight 500
 	border none
 	color #fff
 	text-transform uppercase
@@ -623,6 +629,7 @@ section.reasons
 	font-weight light
 	padding-left 80px
 	display block
+	font-family ubuntu
 
 
 
@@ -829,14 +836,15 @@ section.feedback
 	box-sizing border-box
 .news-list__day
 	display inline-block
-	font-family exoregular
+	font-family 'Exo 2'
 	background $bluecolor
 	padding 6px 10px 6px 10px
 	color #fff
 	margin-right 10px
 .news-list__month
 	display inline-block
-	font-family exolight
+	font-family 'Exo 2'
+	font-weight 300
 	text-transform uppercase
 	letter-spacing 1px
 	font-size 12px
@@ -855,7 +863,8 @@ section.feedback
 	font-weight light
 .news-list__year
 	color #999999
-	font-family exolight
+	font-family 'Exo 2'
+	font-weight 300
 	letter-spacing 1px
 	margin-left 5px
 	font-size 12px
@@ -916,7 +925,8 @@ section.seotext
 	margin-right 0
 .footer-menu__link
 	text-transform uppercase
-	font-family exosemibold
+	font-family 'Exo 2'
+	font-weight 600
 	font-size 16px
 section.up-footer:before
 	content ""
@@ -1021,6 +1031,13 @@ section.footer
 
 /* ------------- Шрифты ---------------*/
 
+
+
+
+
+
+
+/*
 @font-face {
     font-family: 'exobold';
     src: url('../fonts/exo2.0-bold-webfont.woff2') format('woff2'),
@@ -1091,7 +1108,7 @@ section.footer
 }
 
 
-/*
+
 
 @font-face {
     font-family: 'ubunturegular';
