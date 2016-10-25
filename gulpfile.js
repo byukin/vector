@@ -9,15 +9,18 @@ var gulp = require('gulp'),
 	cssmin = require('gulp-cssmin'),
 	htmlprettify = require('gulp-html-prettify'),
 	uglify = require('gulp-uglify'),
-	rename = require('gulp-rename');
+	rename = require('gulp-rename'),
+	rebaseUrls = require('gulp-css-rebase-urls');
+	//cssurl = require('gulp-css-url');
 
 var path = {
     master: { //куда складывать собранные
         html: 'master/',
-        js: 'master/js/',
-        css: 'master/style/css/',
-        img: 'master/style/img/',
-        fonts: 'master/style/fonts/'
+        js: 'master/styles/default/js/',
+        css: 'master/styles/default/css/',
+        icons: 'master/styles/default/css/icons/',
+		img: 'master/styles/default/css/img/',
+        fonts: 'master/styles/default/css/fonts/'
     },
     src: { //Пути откуда брать исходники
         html: 'src/*.jade',
@@ -49,7 +52,7 @@ gulp.task('stylus', function () {
 });
 
 gulp.task('shorthand', function () {
-    gulp.src('master/style/css/*.css')
+    gulp.src(path.master.css+'*.css')
         .pipe(shorthand())
         .on('error', console.log)
         .pipe(gulp.dest(path.master.css))
@@ -57,10 +60,16 @@ gulp.task('shorthand', function () {
 });
 
 gulp.task('cssmin', function () {
-    gulp.src('master/style/css/*.css')
+    gulp.src(path.master.css+'*.css')
         .pipe(cssmin())
 		.on('error', console.log)
         .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(path.master.css));
+});
+
+gulp.task('cssurl', function () {
+    gulp.src(path.master.css+'style.css')
+        .pipe(rebaseUrls())
         .pipe(gulp.dest(path.master.css));
 });
 
@@ -75,7 +84,7 @@ gulp.task('jade', function () {
 });
 
 gulp.task('autoprefixer', function () {
-    gulp.src('master/style/css/*.css')
+    gulp.src(path.master.css+'*.css')
          .pipe(autoprefixer({
             browsers: ['last 10 versions'],
             cascade: false
@@ -86,9 +95,8 @@ gulp.task('autoprefixer', function () {
 });
 
 gulp.task('base64', function () {
-    gulp.src('master/style/css/style.css')
+    gulp.src('master/styles/default/css/style.css')
          .pipe(base64({
-            baseDir: '../img/',
             extensionsAllowed: ['.gif', '.png', '.jpg']
         }))
         .on('error', console.log)
@@ -98,17 +106,9 @@ gulp.task('base64', function () {
 });
 
 gulp.task('htmlprettify', function() {
-  gulp.src('master/*.html')
+  gulp.src(path.master.html+'*.html')
     .pipe(htmlprettify({indent_char: '\t', indent_size: '1'}))
     .pipe(gulp.dest(path.master.html))
-});
-
-gulp.task('jsmin', function () {
-	gulp.src('master/js/*.js')
-		.on('error', console.log)
-		.pipe(uglify())
-        gulp.dest('master/js/');
-
 });
 
 

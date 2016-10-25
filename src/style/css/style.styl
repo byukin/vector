@@ -3,7 +3,10 @@ $min-width = 1024px
 $bluecolor = #317fb4
 $edit = #c2fcc4
 
-
+@import url('fonts/exo/font.css')
+@import url('fonts/ubuntu/font.css')
+@import url('fonts/bender/font.css')
+@import url('../js-libs/owl-carousel/owl.carousel.css')
 
 
 body
@@ -66,7 +69,7 @@ h3
 
 
 section.head
-	background url(../img/dots.png)
+	background url(icons/dots.png)
 .header-logo
 	float left
 	width 10%
@@ -79,7 +82,7 @@ section.head
 	width 30%
 	margin-right 5%
 .header-description__text
-	font-family bender
+	font-family 'Bender'
 	font-size 19px
 	line-height 25px
 	color #666
@@ -97,7 +100,7 @@ section.head
 	float left
 	width 50px
 	height 50px
-	background url(../img/phoneicon.png)
+	background url(icons/phoneicon.png)
 	margin-right 15px
 .header-contacts__text
 	font-size 15px
@@ -123,6 +126,7 @@ section.head
 	box-sizing border-box
 	border-radius 3px
 	cursor pointer
+	transition-duration .3s
 	&:hover
 		background #4892C3
 	&:active
@@ -208,10 +212,10 @@ section.head
 
 
 section.main-slider
-	background-image url(../img/dots.png)
+	background-image url(icons/dots.png)
 	position relative
 section.main-slider:before
-	background-image url(../img/lines.svg)
+	background-image url(img/lines.svg)
 	background-size cover
 	background-repeat no-repeat
 	content ""
@@ -222,8 +226,8 @@ section.main-slider:before
 	margin-top -220px
 .slider
 	margin-top -50px
+	position relative
 .slider__splash
-	content ""
 	position absolute
 	width 60%
 	height 100%
@@ -267,53 +271,14 @@ section.main-slider:before
 	display inline-block
 	box-sizing border-box
 	border 2px solid #fff
+	transition-duration .0s
 	&:hover
 		background #fff
 		color $bluecolor
-.owl-next
-	position absolute
-	top 0
-	bottom 0
-	right 20px
-	margin auto
-	width 48px
-	height 48px
-	opacity .5
-	background-image url(../img/next.png)
-	&:hover
-		opacity .9
-.owl-prev
-	position absolute
-	top 0
-	bottom 0
-	left 20px
-	margin auto
-	width 48px
-	height 48px
-	opacity .5
-	background-image url(../img/prev.png)
-	&:hover
-		opacity .9
-
-.owl-pagination
-	position absolute
-	z-index 1000
-	top:85%
-	left:60%
-.owl-page
-	background #fff
-	display inline-block
-	margin-right 7px
-	width 10px;
-	height 10px;
-	border-radius 10px
-.owl-page.active
-	background #1b5397
-.owl-item
+.slider__item
 	width 100%
-.mainslider__item
-	width 100%
-.mainslider__img
+	overflow hidden
+.slider__img
 	width 100%
 
 
@@ -324,12 +289,12 @@ section.main-slider:before
 
 
 section.info
-	background-image url(../img/lines.svg)
+	background-image url(img/lines.svg)
 	background-size contain
 	background-repeat no-repeat
 	background-position 0px 400px
 .maininfo__title
-	font-family bender
+	font-family 'Bender'
 	font-weight bold
 	text-align center
 .maininfo__title_blue
@@ -384,6 +349,7 @@ section.info
 	margin 0 auto
 	display block
 	margin-top 20px
+	transition-duration .3s
 	&:hover
 		background #4892C3
 	&:active
@@ -398,9 +364,9 @@ section.info
 
 
 section.compare
-	background-image url(../img/dots.png)
+	background-image url(icons/dots.png)
 .compare__title
-	font-family bender
+	font-family 'Bender'
 	font-weight bold
 	text-transform uppercase
 	letter-spacing 6px
@@ -437,7 +403,7 @@ section.compare
 		border none
 .compare-item__title
 	margin-top 30px
-	font-family bender
+	font-family 'Bender'
 	font-size 20px
 	letter-spacing 2px
 	font-weight bold
@@ -503,9 +469,9 @@ section.compare
 
 
 section.specialists
-	background-image url(../img/dots_dark.png)
+	background-image url(icons/dots_dark.png)
 .specialists__title
-	font-family bender
+	font-family 'Bender'
 	font-size 27px
 	color #fff
 	text-transform uppercase
@@ -537,7 +503,7 @@ section.specialists
 	width 10px
 	height 10px
 	position absolute
-	background url(../img/cross.png)
+	background url(icons/cross.png)
 	display inline-block
 	background-repeat no-repeat
 	margin-left -17px
@@ -547,13 +513,13 @@ section.specialists
 	width 10px
 	height 10px
 	position absolute
-	background url(../img/cross.png)
+	background url(icons/cross.png)
 	display inline-block
 	background-repeat no-repeat
 	margin-left 7px
 	margin-top 8px
 .specialists-all__link
-	font-family bender
+	font-family 'Bender'
 	color #8ba0be
 	font-size 12px
 	letter-spacing 2px
@@ -605,6 +571,7 @@ section.specialists
 	bottom 0
 	display block
 	margin-top 20px
+	transition-duration .3s
 	&:hover
 		background #4892C3
 	&:active
@@ -619,11 +586,11 @@ section.specialists
 
 
 section.reasons
-	background-image url(../img/lines.svg)
+	background-image url(img/lines.svg)
 	background-repeat no-repeat
 	background-position 0 -300px
 .reasons__title
-	font-family bender
+	font-family 'Bender'
 	font-weight bold
 	font-size 27px
 	color #000
@@ -665,7 +632,7 @@ section.reasons
 	width 60px
 	height 60px
 	position relative
-	background url(../img/reason1.svg)
+	background url(icons/reason1.svg)
 	background-repeat no-repeat
 	float left
 	margin-right 20px
@@ -673,7 +640,7 @@ section.reasons
 	width 60px
 	height 60px
 	position relative
-	background-image url(../img/reason2.svg)
+	background-image url(icons/reason2.svg)
 	background-repeat no-repeat
 	float left
 	margin-right 20px
@@ -681,7 +648,7 @@ section.reasons
 	width 60px
 	height 80px
 	position relative
-	background url(../img/reason3.svg)
+	background url(icons/reason3.svg)
 	background-repeat no-repeat
 	float left
 	margin-right 20px
@@ -689,7 +656,7 @@ section.reasons
 	width 60px
 	height 60px
 	position relative
-	background url(../img/reason4.svg)
+	background url(icons/reason4.svg)
 	background-repeat no-repeat
 	float left
 	margin-right 20px
@@ -713,9 +680,9 @@ section.reasons
 
 
 section.feedback
-	background-image url(../img/dots.png)
+	background-image url(icons/dots.png)
 .feedback__title
-	font-family bender
+	font-family 'Bender'
 	font-weight bold
 	font-size 27px
 	color #000
@@ -748,7 +715,7 @@ section.feedback
 	width 10px
 	height 10px
 	position absolute
-	background url(../img/cross.png)
+	background url(icons/cross.png)
 	display inline-block
 	background-repeat no-repeat
 	margin-left -17px
@@ -758,13 +725,13 @@ section.feedback
 	width 10px
 	height 10px
 	position absolute
-	background url(../img/cross.png)
+	background url(icons/cross.png)
 	display inline-block
 	background-repeat no-repeat
 	margin-left 7px
 	margin-top 8px
 .feedback-all__link
-	font-family bender
+	font-family 'Bender'
 	color #8ba0be
 	font-size 12px
 	letter-spacing 2px
@@ -830,6 +797,7 @@ section.feedback
 	display inline-block
 	margin-left 165px
 	margin-top 15px
+	cursor pointer
 	&:hover
 		background $bluecolor
 		border-color $bluecolor
@@ -848,7 +816,7 @@ section.feedback
 
 
 .news__title
-	font-family bender
+	font-family 'Bender'
 	font-weight bold
 	font-size 27px
 	color #000
@@ -881,7 +849,7 @@ section.feedback
 	width 10px
 	height 10px
 	position absolute
-	background url(../img/cross.png)
+	background url(icons/cross.png)
 	display inline-block
 	background-repeat no-repeat
 	margin-left -17px
@@ -891,13 +859,13 @@ section.feedback
 	width 10px
 	height 10px
 	position absolute
-	background url(../img/cross.png)
+	background url(icons/cross.png)
 	display inline-block
 	background-repeat no-repeat
 	margin-left 7px
 	margin-top 8px
 .news-all__link
-	font-family bender
+	font-family 'Bender'
 	color #8ba0be
 	font-size 12px
 	letter-spacing 2px
@@ -954,12 +922,12 @@ section.feedback
 
 
 section.seotext
-	background-image url(../img/seobackground.png)/*base64:skip*/
+	background-image url(img/seobackground.png)/*base64:skip*/
 	background-size cover
 	background-position center center
 	background-repeat no-repeat
 .seotext__title
-	font-family bender
+	font-family 'Bender'
 	font-weight bold
 	font-size 30px
 	margin-top 40px
@@ -1013,7 +981,7 @@ section.seotext
 	font-size 16px
 section.up-footer:before
 	content ""
-	background-image url(../img/lines.svg)
+	background-image url(img/lines.svg)
 	display block
 	position absolute
 	background-repeat no-repeat
@@ -1028,7 +996,7 @@ section.up-footer:before
 
 
 section.footer
-	background url(../img/dots.png)
+	background url(icons/dots.png)
 	margin-top -30px
 .footer-info
 	display block
@@ -1083,7 +1051,7 @@ section.footer
 	margin-left 30px
 	width 40px
 	height 40px
-	background url(../img/vk.png)
+	background url(icons/vk.png)
 .footer-info__dev
 	float right
 	text-align right
@@ -1093,7 +1061,7 @@ section.footer
 	width 130px
 	height 30px
 	right 0
-	background url(../img/devlogo.png)
+	background url(img/devlogo.png)
 	background-repeat no-repeat
 .footer-info__devlink
 	display block
@@ -1109,34 +1077,5 @@ section.footer
 
 
 
-
-
-
-
-/* ------------- Шрифты ---------------*/
-
-
-
-
-/*
-
-
-@font-face {
-    font-family: 'exobold';
-    src: url('../fonts/exo2.0-bold-webfont.woff2') format('woff2'),
-         url('../fonts/exo2.0-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-
-
-
-
-*/
 
 
