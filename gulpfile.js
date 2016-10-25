@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
 	cssmin = require('gulp-cssmin'),
 	htmlprettify = require('gulp-html-prettify'),
+	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename');
 
 var path = {
@@ -100,6 +101,14 @@ gulp.task('htmlprettify', function() {
   gulp.src('master/*.html')
     .pipe(htmlprettify({indent_char: '\t', indent_size: '1'}))
     .pipe(gulp.dest(path.master.html))
+});
+
+gulp.task('jsmin', function () {
+	gulp.src('master/js/*.js')
+		.on('error', console.log)
+		.pipe(uglify())
+        gulp.dest('master/js/');
+
 });
 
 

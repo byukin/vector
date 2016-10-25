@@ -40,8 +40,11 @@ ul,li
 a
 	text-decoration none
 	color #000
+	border-bottom none
+	padding-bottom 1px
 	&:hover
-		color red
+		color $bluecolor
+		border-bottom 1px solid rgba(50,127,179,0.5)
 h1
 	font-size 30px;
 	line-height 36px;
@@ -120,6 +123,10 @@ section.head
 	box-sizing border-box
 	border-radius 3px
 	cursor pointer
+	&:hover
+		background #4892C3
+	&:active
+		background #50647F
 
 
 
@@ -189,6 +196,9 @@ section.head
 	border none
 .submenu__link
 	color #fff
+	&:hover
+		color #fff
+		border-bottom 1px solid rgba(255,255,255,0.4)
 
 
 
@@ -374,6 +384,10 @@ section.info
 	margin 0 auto
 	display block
 	margin-top 20px
+	&:hover
+		background #4892C3
+	&:active
+		background #50647F
 
 
 
@@ -588,6 +602,10 @@ section.specialists
 	bottom 0
 	display block
 	margin-top 20px
+	&:hover
+		background #4892C3
+	&:active
+		background #50647F
 
 
 
@@ -809,6 +827,11 @@ section.feedback
 	display inline-block
 	margin-left 165px
 	margin-top 15px
+	&:hover
+		background $bluecolor
+		border-color $bluecolor
+		.feedback-list__link
+			color #fff
 .feedback-list__link
 	text-transform uppercase
 	color #8c8c8c
@@ -1050,6 +1073,9 @@ section.footer
 .footer-info__link
 	color #a6d3f1
 	font-weight 300
+	&:hover
+		color #fff
+		border-bottom 1px solid rgba(255,255,255,0.5)
 .footer-info__social
 	margin-left 30px
 	width 40px
