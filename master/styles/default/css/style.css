@@ -71,6 +71,9 @@ section.head {
 .header-logo__img {
   width: 100px;
 }
+.header-logo__link:hover {
+  border: none;
+}
 .header-description {
   float: left;
   width: 30%;
