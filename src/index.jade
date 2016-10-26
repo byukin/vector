@@ -9,7 +9,8 @@ html
 		meta(width="device-width", initial-scale="1")
 		link(href="styles/default/css/style.css",rel="stylesheet")
 	body
-		section.head
+		// Шапка
+		section
 			.global-layout
 				.header.clearfix
 					.header-logo
@@ -27,30 +28,34 @@ html
 							| 40-30-20
 					.header-submit
 						button.header-submit__button Проконсультироваться
+		// Меню
+		section
+			.global-layout
 				.menu.clearfix
-					ul
-						li.menu__item
-							a(href="#").menu__link Бухгалтерские услуги
-							ul.submenu
-								li.submenu__item
-									a(href="#").submenu__link Составление отчетности
-								li.submenu__item
-									a(href="#").submenu__link Выбор системы налогообложения
-								li.submenu__item
-									a(href="#").submenu__link Приходящий бухгалтер
-						li.menu__item
-							a(href="#").menu__link Юридические услуги
-						li.menu__item
-							a(href="#").menu__link.link_hide Печати и штампы
-						li.menu__item
-							a(href="#").menu__link Бизнес услуги
-						li.menu__item
-							a(href="#").menu__link О компании
-						li.menu__item
-							a(href="#").menu__link Акции
-						li.menu__item
-							a(href="#").menu__link Контакты
-		section.main-slider
+						ul
+							li.menu__item
+								a(href="#").menu__link Бухгалтерские услуги
+								ul.submenu
+									li.submenu__item
+										a(href="#").submenu__link Составление отчетности
+									li.submenu__item
+										a(href="#").submenu__link Выбор системы налогообложения
+									li.submenu__item
+										a(href="#").submenu__link Приходящий бухгалтер
+							li.menu__item
+								a(href="#").menu__link Юридические услуги
+							li.menu__item
+								a(href="#").menu__link.link_hide Печати и штампы
+							li.menu__item
+								a(href="#").menu__link Бизнес услуги
+							li.menu__item
+								a(href="#").menu__link О компании
+							li.menu__item
+								a(href="#").menu__link Акции
+							li.menu__item
+								a(href="#").menu__link Контакты
+		// Слайдер
+		section
 			.global-layout
 				.slider
 					.slider__item
@@ -67,7 +72,8 @@ html
 						img(src="uploads/img/slide3.png").slider__img
 					.slider__item
 						img(src="uploads/img/slide3.png").slider__img
-		section.info
+		// Главная информация и разделы
+		section
 			.global-layout
 				.maininfo
 					h2.maininfo__title
@@ -160,7 +166,8 @@ html
 							.maininfo-submit
 								.maininfo-submit__text Проконсультируйтесь по&nbsp;услугам подробнее
 								button.maininfo-submit__button Проконсультироваться
-		section.compare
+		// Сравнение затрат
+		section
 			.global-layout.clearfix
 				h2.compare__title Сравнение затрат
 				.compare__text Предлагаем Вам сравнить стоимость содержания штатного бухгалтера и&nbsp;стоимость бухгалтерского сопровождения в нашей компании.
@@ -186,7 +193,8 @@ html
 							li.compare-item__list Ваша экономия
 					.compare-item__result Итого, использование бухгалтерского аутсорсинга <b>сэкономит вам 15 600 руб</b>.
 					.compare-item__price + 15 600 руб.
-		section.specialists
+		// Специалисты
+		section
 			.global-layout
 				h2.specialists__title Наши специалисты
 				.specialists-all
@@ -210,83 +218,91 @@ html
 						.specialists-list__name Павел Семенович Васильев
 						.specialists-list__info Изготовление печатей <br> и&nbsp;штампов
 						button.specialists-list__submit Проконсультироваться
-		section.reasons
+		// Причины позвонить нам
+		section
 			.global-layout
-				h2.reasons__title 4 причины
-					=" "
-					span.reasons__title_blue позвонить нам
-				.reasons-list.clearfix
-					.reasons-list__item
-						.reasons-list__icon_one
-						.reasons-list__title Ответственность за Вашу бухгалтерию теперь на нас!
-						.reasons-list__text Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине. Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине.
-					.reasons-list__item
-						.reasons-list__icon_two
-						.reasons-list__title Ответственность за Вашу бухгалтерию теперь на нас!
-						.reasons-list__text Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине. Мы работаем по договору, поэтому мы несем ответственность в соответствии с гражданским кодексом, а не трудовым.
-					.reasons-list__item
-						.reasons-list__icon_three
-						.reasons-list__title Ответственность за Вашу бухгалтерию теперь на нас!
-						.reasons-list__text Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине. Мы работаем по договору, поэтому мы несем ответственность в соответствии с гражданским кодексом, а не трудовым.
-					.reasons-list__item
-						.reasons-list__icon_four
-						.reasons-list__title Ответственность за Вашу бухгалтерию теперь на нас!
-						.reasons-list__text Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине. Мы работаем по договору, поэтому мы несем ответственность в соответствии с гражданским кодексом, а не трудовым.
-		section.feedback
+				.reasons
+					h2.reasons__title 4 причины
+						=" "
+						span.reasons__title_blue позвонить нам
+					.reasons-list.clearfix
+						.reasons-list__item
+							.reasons-list__icon_one
+							.reasons-list__title Ответственность за Вашу бухгалтерию теперь на нас!
+							.reasons-list__text Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине. Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине.
+						.reasons-list__item
+							.reasons-list__icon_two
+							.reasons-list__title Ответственность за Вашу бухгалтерию теперь на нас!
+							.reasons-list__text Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине. Мы работаем по договору, поэтому мы несем ответственность в соответствии с гражданским кодексом, а не трудовым.
+						.reasons-list__item
+							.reasons-list__icon_three
+							.reasons-list__title Ответственность за Вашу бухгалтерию теперь на нас!
+							.reasons-list__text Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине. Мы работаем по договору, поэтому мы несем ответственность в соответствии с гражданским кодексом, а не трудовым.
+						.reasons-list__item
+							.reasons-list__icon_four
+							.reasons-list__title Ответственность за Вашу бухгалтерию теперь на нас!
+							.reasons-list__text Согласно договору мы гарантируем компенсацию всех штрафов и пени со стороны ИФНС, если они произошли по нашей вине. Мы работаем по договору, поэтому мы несем ответственность в соответствии с гражданским кодексом, а не трудовым.
+		// Отзывы
+		section
 			.global-layout.fakebackground
-				h2.feedback__title Отзывы клиентов
-				.feedback-all
-					a(href="#").feedback-all__link Все отзывы
-				.feedback-list.clearfix
-					.feedback-list__item
-						.feedback-list__photo
-							img(src="uploads/img/feedback1.png" alt="" title="").feedback-list__img
-						.feedback-list__name Роберт Мясников
-						.feedback-list__info Орловские молочные фермы
-						.feedback-list__text Огромное спасибо компании «Вектор» за столь быстрое реагирование на наши запросы. Довольны бухгалтерским сопровождением от наших партнеров. компании «Вектор» за столь быстрое реагирование на наши запросы. Довольны бухгалтерским сопровождением от наших партнеров.
-						.feedback-list__more
-							a(href="").feedback-list__link Читать полностью
-					.feedback-list__item
-						.feedback-list__photo
-							img(src="uploads/img/feedback2.png" alt="" title="").feedback-list__img
-						.feedback-list__name Эльвира Александровна
-						.feedback-list__info Индивидуальный предприниматель
-						.feedback-list__text Ребята очень быстро помогли мне в регистрации своего дела! Очень долго это было просто моим увлечением и вот теперь стало полноценной работой! Спасибо Вектору за это!
-						.feedback-list__more
-							a(href="").feedback-list__link Читать полностью
-		section.news
+				.feedback
+					h2.feedback__title Отзывы клиентов
+					.feedback-all
+						a(href="#").feedback-all__link Все отзывы
+					.feedback-list.clearfix
+						.feedback-list__item
+							.feedback-list__photo
+								img(src="uploads/img/feedback1.png" alt="" title="").feedback-list__img
+							.feedback-list__name Роберт Мясников
+							.feedback-list__info Орловские молочные фермы
+							.feedback-list__text Огромное спасибо компании «Вектор» за столь быстрое реагирование на наши запросы. Довольны бухгалтерским сопровождением от наших партнеров. компании «Вектор» за столь быстрое реагирование на наши запросы. Довольны бухгалтерским сопровождением от наших партнеров.
+							.feedback-list__more
+								a(href="").feedback-list__link Читать полностью
+						.feedback-list__item
+							.feedback-list__photo
+								img(src="uploads/img/feedback2.png" alt="" title="").feedback-list__img
+							.feedback-list__name Эльвира Александровна
+							.feedback-list__info Индивидуальный предприниматель
+							.feedback-list__text Ребята очень быстро помогли мне в регистрации своего дела! Очень долго это было просто моим увлечением и вот теперь стало полноценной работой! Спасибо Вектору за это!
+							.feedback-list__more
+								a(href="").feedback-list__link Читать полностью
+		// Новости
+		section
 			.global-layout
-				h2.news__title Новости
-				.news-all
-					a(href="#").news-all__link Все новости
-				.news-list.clearfix
-					.news-list__item
-						.news-list__day 02
-						.news-list__month Сентября
-						.news-list__content
-							a(href="").news-list__link Новые правила госрегистрации организаций и ИП
-							.news-list__text ФНС подготовила второй в этом году обзор судебной практики по вопросам госрегистрации организаций и ИП
-						.news-list__year 2016
-					.news-list__item
-						.news-list__day 02
-						.news-list__month Сентября
-						.news-list__content
-							a(href="").news-list__link Новые правила госрегистрации организаций и ИП
-							.news-list__text Опубликован проект поправок согласно, которому статья 164 НК дополнят новым пунктом
-						.news-list__year 2016
-					.news-list__item
-						.news-list__day 15
-						.news-list__month Августа
-						.news-list__content
-							a(href="").news-list__link Экспортерам разрешат применять ставки НДС вместо нулевой
-							.news-list__text Одним из возможных механизмов является установление налога для напитков, содержащих более пяти грамм сахара на 100 мл
-						.news-list__year 2016
-		section.seotext
+				.news
+					h2.news__title Новости
+					.news-all
+						a(href="#").news-all__link Все новости
+					.news-list.clearfix
+						.news-list__item
+							.news-list__day 02
+							.news-list__month Сентября
+							.news-list__content
+								a(href="").news-list__link Новые правила госрегистрации организаций и ИП
+								.news-list__text ФНС подготовила второй в этом году обзор судебной практики по вопросам госрегистрации организаций и ИП
+							.news-list__year 2016
+						.news-list__item
+							.news-list__day 02
+							.news-list__month Сентября
+							.news-list__content
+								a(href="").news-list__link Новые правила госрегистрации организаций и ИП
+								.news-list__text Опубликован проект поправок согласно, которому статья 164 НК дополнят новым пунктом
+							.news-list__year 2016
+						.news-list__item
+							.news-list__day 15
+							.news-list__month Августа
+							.news-list__content
+								a(href="").news-list__link Экспортерам разрешат применять ставки НДС вместо нулевой
+								.news-list__text Одним из возможных механизмов является установление налога для напитков, содержащих более пяти грамм сахара на 100 мл
+							.news-list__year 2016
+		// СЕО-текст
+		section
 			.global-layout
-				h2.seotext__title Копмлексное обслуживание ООО и ИП
-				.seotext__text Комплексное обслуживание ООО и ИП в Орле — одна из наших основных специализаций. Опыт, знания, выработанныегодами методы решения задач и специалисты высшего уровня – залог успешной работы вашей будущей компании. Собираетесь ли вы зарегистрировать ООО или ИП или уже являетесь владельцев своего собственного бизнеса вы получаете высококлассное обслуживание за доступные средства. А заключая договор на бухгалтерские обслуживание с нашей компанией вы будете экономить средства на зарплату штатного сотрудника, организации его рабочего места, социальных выплатах, отпусках, больничных. В своей работе по оказанию бухгалтерских и юридических услуг для бизнеса мы ориентируемся на комплексный подход к выполнению задач плодотворное сотрудничество с представителями различных компаний, сфер и структур.
-
-		section.up-footer
+				.seotext
+					h2.seotext__title Копмлексное обслуживание ООО и ИП
+					.seotext__text Комплексное обслуживание ООО и ИП в Орле — одна из наших основных специализаций. Опыт, знания, выработанныегодами методы решения задач и специалисты высшего уровня – залог успешной работы вашей будущей компании. Собираетесь ли вы зарегистрировать ООО или ИП или уже являетесь владельцев своего собственного бизнеса вы получаете высококлассное обслуживание за доступные средства. А заключая договор на бухгалтерские обслуживание с нашей компанией вы будете экономить средства на зарплату штатного сотрудника, организации его рабочего места, социальных выплатах, отпусках, больничных. В своей работе по оказанию бухгалтерских и юридических услуг для бизнеса мы ориентируемся на комплексный подход к выполнению задач плодотворное сотрудничество с представителями различных компаний, сфер и структур.
+		// Меню футер
+		section
 			.global-layout
 				.footer-menu.clearfix
 					ul
@@ -304,7 +320,8 @@ html
 							a(href="#").footer-menu__link Акции
 						li.footer-menu__item
 							a(href="#").footer-menu__link Контакты
-		section.footer
+		// Футер
+		section
 			.global-layout
 				.footer-info.clearfix
 					.footer-info__copyright © 2016, Компания «Вектор». Все&nbsp;права защищены.

@@ -10,7 +10,8 @@ var gulp = require('gulp'),
 	htmlprettify = require('gulp-html-prettify'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename'),
-	rebaseUrls = require('gulp-css-rebase-urls');
+	rebaseUrls = require('gulp-css-rebase-urls'),
+	jeet = require('jeet');
 	//cssurl = require('gulp-css-url');
 
 var path = {
@@ -45,7 +46,9 @@ gulp.task('webserver', ['watch'], function() {
 
 gulp.task('stylus', function () {
     gulp.src(path.src.css)
-        .pipe(stylus())
+        .pipe(stylus({
+			  use: jeet()
+		}))
         .on('error', console.log)
         .pipe(gulp.dest(path.master.css))
         .pipe(livereload());
