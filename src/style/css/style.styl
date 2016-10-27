@@ -19,8 +19,6 @@ body
 	-moz-font-smoothing: antialiased;
 	-o-font-smoothing: antialiased;
 	font-smoothing: antialiased;
-.test
-	span(1/11)
 .clearfix:after{
 	content "."
 	display block
@@ -53,41 +51,9 @@ h3
 	line-height 24px
 	font-weight normal
 
+/* ------------- Layout ---------------*/
 
-
-/* ------------ Layouts -------------- */
-
-
-.global-layout
-	max-width $max-width
-	min-width $min-width
-	margin 0 auto
-	padding 30px
-	box-sizing border-box
-	position relative
-
-.header-logo
-	float left
-	width 10%
-	margin-right 4%
-.header-description
-	float left
-	width 30%
-	margin-right 5%
-.header-contacts
-	width 30%
-	float left
-	margin-top 15px
-.header-submit
-	width 200px
-	float right
-	margin-top 20px
-
-.maininfo-cat__item
-	width 25%
-	float left
-	height 250px
-
+@import 'layout.styl'
 
 
 /* ------------- Шапка ---------------*/
@@ -159,19 +125,7 @@ section:nth-child(2)
 	border-top 1px solid #999
 	padding-top 20px
 .menu__item
-	height 40px
-	float left
-	white-space nowrap
-	margin-right 4%
 	transition-duration .4s
-	&:hover
-		.submenu
-			display block
-			opacity 1
-	@media (max-width: 1225px)
-		margin-right 3%
-.menu__item:last-child
-	margin-right 0
 .menu__link
 	text-transform uppercase
 	font-family 'Exo 2'
@@ -237,16 +191,9 @@ section:nth-child(3):before
 	height 160%
 	margin-top -220px
 .slider
-	margin-top -50px
-	position relative
 	opacity 0
 	transition-duration .5s;
 .slider__splash
-	position absolute
-	width 60%
-	height 100%
-	top 0
-	right -60px
 	background rgba(45,126,181,.6)
 	-moz-transform: skewX(-15deg);
 	-webkit-transform: skewX(-15deg);
@@ -254,18 +201,12 @@ section:nth-child(3):before
 	-ms-transform: skewX(-15deg);
 	transform: skewX(-15deg);
 .slider__description
-	position absolute
-	left 55%
-	top 20%
 	font-family 'Exo 2'
 	font-weight 600
 	font-size 30px
 	line-height 36px
 	color #fff
 .slider__description_left
-	position absolute
-	left 10%
-	top 35%
 	font-family 'Exo 2'
 	font-weight 600
 	font-size 30px
@@ -289,11 +230,6 @@ section:nth-child(3):before
 	&:hover
 		background #fff
 		color $bluecolor
-.slider__item
-	width 100%
-	overflow hidden
-.slider__img
-	width 100%
 
 
 
@@ -307,43 +243,38 @@ section:nth-child(4)
 	background-size contain
 	background-repeat no-repeat
 	background-position 0px 400px
-.maininfo__title
+.categories__title
 	font-family 'Bender'
 	font-weight bold
 	text-align center
-.maininfo__title_blue
+.categories__title_blue
 	color $bluecolor
-.maininfo__text
+.categories__text
 	font-weight 300
 	line-height 28px
-	max-width 70%
-	margin 0 auto
 	text-align center
-.maininfo-cat
+.categories-list
 	margin-top 60px
 	margin-left -15px
 	margin-right -15px
-.maininfo-cat__item
+.categories-list__item
 	overflow hidden
 	padding 15px
 	box-sizing border-box
-.maininfo-cat__thumbnail
-	max-height 150px
-	overflow hidden
-.maininfo-cat__img
+.categories-list__img
 	width 100%
 	height auto
-.maininfo-submit
+.categories-list-submit
 	border 1px solid #c7c7c7
 	height 180px
 	box-sizing border-box
-.maininfo-submit__text
+.categories-list-submit__text
 	display block
 	max-width 90%
 	text-align center
 	margin 0 auto
 	margin-top 30px
-.maininfo-submit__button
+.categories-list-submit__button
 	width 200px
 	background $bluecolor
 	font-family 'Exo 2'
@@ -403,12 +334,7 @@ section:nth-child(5)
 	margin 0 auto
 	text-align center
 .compare-item
-	width 50%
-	margin-top 40px
-	padding-left 50px
-	float left
 	border-right 1px dashed #ccc
-	box-sizing border-box
 	&:last-child
 		border none
 .compare-item__title
@@ -419,16 +345,6 @@ section:nth-child(5)
 	font-weight bold
 	text-transform uppercase
 	color $bluecolor
-.compare-item__graph
-	display block
-	margin-top 30px
-	width 50%
-	margin-right 5%
-	float left
-.compare-item__description
-	float left
-	width 45%
-	margin-top 60px
 .compare-item__list
 	display block
 .compare-item__list:before
@@ -542,10 +458,6 @@ section:nth-child(6)
 	margin-top 40px
 	margin-bottom 40px
 .specialists-list__item
-	width 33.333333333333%
-	text-align center
-	float left
-	box-sizing border-box
 	border-right 1px dashed rgba(255,255,255,0.3)
 	&:last-child
 		border none
@@ -624,20 +536,6 @@ section:nth-child(7)
 	display block
 .reasons__title_blue
 	color $bluecolor
-.reasons-list
-	margin-top 60px
-	margin-bottom 60px
-	-moz-column-count: 2
-	-webkit-column-count: 2
-	-o-column-count: 2
-    column-count: 2
-	column-count: 2
-.reasons-list__item
-	padding 15px
-	padding-right 30px
-	box-sizing border-box
-	display inline-block
-	position relative
 .reasons-list__icon_one
 	width 60px
 	height 60px
@@ -670,21 +568,18 @@ section:nth-child(7)
 	background-repeat no-repeat
 	float left
 	margin-right 20px
-
 .reasons-list__title
 	color $bluecolor
 	font-size 18px
 	line-height 27px
 .reasons-list__text
 	font-weight 300
-	padding-left 80px
-	display block
 	font-family ubuntu
 
 
 
 
-/* ------------- Отзывы ---------------*/
+/* ------------- Отзывы --------------*/
 
 
 
@@ -763,18 +658,9 @@ section:nth-child(8)
 	-o-transform: skewX(-15deg);
 	-ms-transform: skewX(-15deg);
 	transform: skewX(-15deg);
-.feedback-list
-	margin-top 40px
-	margin-bottom 40px
 .feedback-list__item
-	width 49%
-	float left
 	background #fff
-	padding 30px
-	box-sizing border-box
 	box-shadow 0px 2px 13px 0px rgba(0, 0, 0, 0.07)
-	&:nth-child(2n)
-		float right
 .feedback-list__photo
 	width 135px
 	height 135px
@@ -883,15 +769,6 @@ section:nth-child(8)
 	letter-spacing 2px
 	text-transform uppercase
 	text-align center
-
-.news-list
-	margin-top 40px
-	margin-bottom 40px
-.news-list__item
-	width 33.33333333333%
-	float left
-	padding-right 10px
-	box-sizing border-box
 .news-list__day
 	display inline-block
 	font-family 'Exo 2'
@@ -954,13 +831,9 @@ section:nth-child(10)
 	margin-top 40px
 	margin-bottom 40px
 .seotext__text
-	width 70%
 	line-height 28px
-	display block
-	margin 0 auto
 	color #fff
 	font-weight 300
-	margin-bottom 70px
 
 
 
@@ -978,20 +851,8 @@ section:nth-child(11):before
 	background-size cover
 	z-index -1
 	background-position 0 -140px
-
-.footer-menu
-	margin-top 0px
-
 .footer-menu__item
-	height 50px
-	float left
-	display block
-	margin-right 4%
 	transition-duration 0.4s
-	@media (max-width: 1225px)
-		margin-right 3%
-.footer-menu__item:last-child
-	margin-right 0
 .footer-menu__link
 	text-transform uppercase
 	font-family 'Exo 2'
@@ -1011,78 +872,36 @@ section:nth-child(11):before
 section:nth-child(12)
 	background url(icons/dots.png)
 	margin-top -30px
-.footer-info
-	display block
 .footer-info__copyright
 	font-weight 300
 	font-size 15px
 	line-height 23px
-	width 17%
-	float left
-.footer-info__contacts:before
-	content ""
-	position absolute
-	width 60%
-	top 0
-	right 0
-	left 0
-	margin auto
-	background rgba(88,139,174,0.8)
-	height 100%
-	z-index -1
-	-moz-transform: skewX(-15deg);
-	-webkit-transform: skewX(-15deg);
-	-o-transform: skewX(-15deg);
-	-ms-transform: skewX(-15deg);
-	transform: skewX(-15deg);
-.footer-info__contacts
-	width 60%
-	float left
-	padding-left 50px
-.footer-info__item
-	float left
-	margin-right 5%
-	position relative
-	&:last-child
-		margin-right 0
-		width 10%
-.footer-info__phone
+.footer-contacts__phone
 	color #fff
 	font-size 21px
-.footer-info__mail
+.footer-contacts__mail
 	color #a6d3f1
 	font-weight 300
-.footer-info__adress
+.footer-contacts__adress
 	color #fff
-.footer-info__link
+.footer-contacts__link
 	color #a6d3f1
 	font-weight 300
 	&:hover
 		color #fff
 		border-bottom 1px solid rgba(255,255,255,0.5)
-.footer-info__social
-	margin-left 30px
+.footer-contacts__social
 	width 40px
 	height 40px
 	background url(icons/vk.png)
-.footer-info__dev
-	float right
-	text-align right
-	position relative
-.footer-info__devlogo
-	position absolute
-	width 130px
-	height 30px
-	right 0
+.footer-dev__devlogo
 	background url(img/devlogo.png)
 	background-repeat no-repeat
-.footer-info__devlink
-	display block
-	margin-top 25px
+.footer-dev__devlink
 	font-size 13px
 	line-height 17px
 	font-weight 300
-.footer-info__link_dev
+.footer-dev__link_dev
 	color $bluecolor
 	font-weight 400
 
