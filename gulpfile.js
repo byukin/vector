@@ -9,10 +9,7 @@ var gulp = require('gulp'),
 	cssmin = require('gulp-cssmin'),
 	htmlprettify = require('gulp-html-prettify'),
 	uglify = require('gulp-uglify'),
-	rename = require('gulp-rename'),
-	rebaseUrls = require('gulp-css-rebase-urls'),
-	jeet = require('jeet');
-	//cssurl = require('gulp-css-url');
+	rename = require('gulp-rename');
 
 var path = {
     master: { //куда складывать собранные
@@ -26,7 +23,7 @@ var path = {
     src: { //Пути откуда брать исходники
         html: 'src/*.jade',
         js: 'src/js/main.js',
-        css: 'src/style/css/style.styl',
+        css: 'src/style/css/*.styl',
         img: 'src/style/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/style/fonts/**/*.*'
     },
@@ -46,9 +43,7 @@ gulp.task('webserver', ['watch'], function() {
 
 gulp.task('stylus', function () {
     gulp.src(path.src.css)
-        .pipe(stylus({
-			  use: jeet()
-		}))
+        .pipe(stylus())
         .on('error', console.log)
         .pipe(gulp.dest(path.master.css))
         .pipe(livereload());
