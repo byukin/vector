@@ -1,8 +1,8 @@
 /* ------------ Layouts -------------- */
 /* ------------ Основной -------------- */
 .global-layout {
-  max-width: $max-width;
-  min-width: $min-width;
+  max-width: 1230px;
+  min-width: 1024px;
   margin: 0 auto;
   padding: 30px;
   box-sizing: border-box;
