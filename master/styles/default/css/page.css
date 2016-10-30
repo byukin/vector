@@ -1,3 +1,6 @@
+.active {
+  color: #317fb4;
+}
 .page__title {
   text-align: center;
   font-family: 'Bender';
@@ -196,6 +199,7 @@
 .day-value {
   width: 140px;
   height: 140px;
+  padding-top: 10px;
   vertical-align: middle;
   display: table-cell;
   background: url("icons/krug.png");
@@ -211,4 +215,42 @@
   color: #999;
   display: block;
   margin-top: 10px;
+}
+.page-content-tabs {
+  border: 1px solid #ccc;
+  padding: 10px 30px 10px 30px;
+}
+.page-content-tabs__item {
+  display: inline-block;
+  margin-right: 30px;
+}
+.page-content-tabs__link {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-bottom: 1px dashed #ccc;
+}
+.page-content-tabs__link:hover {
+  border-bottom: 1px dashed #317fb4;
+}
+.page-content-tabs__link.active {
+  border-bottom: none;
+}
+.page-content-text {
+  margin-top: 30px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+.page-content-text li:before {
+  content: "\2014";
+  margin-right: 10px;
+}
+.page-content-text quote {
+  background: #f4f4f4;
+  display: block;
+  border-left: 5px solid #317fb4;
+  padding: 15px 30px 15px 30px;
+  box-sizing: border-box;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
