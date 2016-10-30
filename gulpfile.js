@@ -8,7 +8,6 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
 	cssmin = require('gulp-cssmin'),
 	htmlprettify = require('gulp-html-prettify'),
-	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename');
 
 var path = {

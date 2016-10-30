@@ -1,0 +1,218 @@
+doctype html5
+html
+	head
+		title
+		meta(charset="utf-8")
+		meta(name="description",content="")
+		meta(name="keywords",content="")
+		meta(http-equiv="content-language", content="ru")
+		meta(width="device-width", initial-scale="1")
+		link(href="styles/default/css/style.css",rel="stylesheet")
+	body
+		// Шапка
+		section.section-header
+			.global-layout
+				.header.clearfix
+					.header-logo
+						a(href="/").header-logo__link
+							img(src="styles/default/css/img/logo.svg", title="Логотип", alt="Логотип").header-logo__img
+					.header-description
+						h1.header-description__text
+							span.header-description__text_blue Профессиональные бизнес-услуги&ensp;
+							|для&nbsp;предприятий и&nbsp;частных лиц в&nbsp;Орле
+					.header-contacts
+						.header-contacts__icon
+						.header-contacts__text Бесплатная консультация по&nbsp;телефону
+						.header-contacts__phone
+							span.header-contacts__phone_gray + 7 4862&ensp;
+							| 40-30-20
+					.header-submit
+						button.header-submit__button Проконсультироваться
+		// Меню
+		section.section-menu
+			.global-layout
+				.menu.clearfix
+						ul
+							li.menu__item
+								a(href="#").menu__link Бухгалтерские услуги
+								ul.submenu
+									li.submenu__item
+										a(href="#").submenu__link Составление отчетности
+									li.submenu__item
+										a(href="#").submenu__link Выбор системы налогообложения
+									li.submenu__item
+										a(href="#").submenu__link Приходящий бухгалтер
+							li.menu__item
+								a(href="#").menu__link Юридические услуги
+							li.menu__item
+								a(href="#").menu__link.link_hide Печати и штампы
+							li.menu__item
+								a(href="#").menu__link Бизнес услуги
+							li.menu__item
+								a(href="#").menu__link О компании
+							li.menu__item
+								a(href="#").menu__link Акции
+							li.menu__item
+								a(href="#").menu__link Контакты
+		section.section-page
+			.global-layout.clearfix
+				h2.page__title Реристрация ООО
+				.page-content
+					form(action="/").free-consultation-form
+						.free-consultation-form__title Получите бесплатную консультацию
+						.free-consultation-form__text Оставьте свой номер телефона и получите бесплатную консультацию
+						input(type="text" placeholder="Телефон в любом формате").free-consultation-form__input
+						button(type="submit").free-consultation-form__submit Оставить заявку
+					.page-content-one
+						h3.page-content-one__title Регистрация ООО «под ключ» включает в себя:
+						ul
+							li консультации по вопросам создания и регистрации фирмы ООО
+							li подбор юридического адреса для регистрации фирмы ООО
+							li разработка комплектов документов для регистрации фирмы ООО
+							li государственная регистрация фирмы
+							li установка онлайн-бухглатерии и обучение основам интернет-банкинга
+							li постановка фирмы на учет в фондах по городу Орлу
+							li переход фирмы на упрощенную систему налогообложения
+					.page-content-two
+						h3.page-content-two__title Мы поможем вам сделать
+						ol
+							li Решение (протокол) о создании ООО, АО
+							li Договор об Учреждении ООО (если участников больше одного)
+							li Устав
+							li Заявление на регистрацию ООО
+							li Заявление о переходе на УСН (если будет применяться данная система)
+					.page-content-three
+						.page-content-three__icon
+						h3.page-content-three__title Что мы еще сделаем:
+						ul
+							li мы самостоятельно оплатим государственную пошлину.
+							li сдадим документы в ИФНС на регистрацию и получим их после регистрации.
+							li получим информационное письмо с кодами статистики.
+
+				.page-sidebar
+					.page-sidebar-price
+						.page-sidebar-price__title Регистрация ООО
+						.page-sidebar-price__price 1 000 ₽
+					.page-sidebar-banner
+						img(src="uploads/img/banner1.png" alt="" title="").page-sidebar-banner__img
+					.page-sidebar-garant
+						h3.page-sidebar-garant__title Наша гарантия
+						.page-sidebar-garant__day
+							.day-value 7 <span>дней</span>
+						| Зарегистрируем вашу компанию за 7 дней
+
+
+
+		// Вам может пригодиться
+		section.section-categories
+			.global-layout
+				.categories
+					h2.categories__title.categories__title_blue Вам может пригодиться
+					.categories-list.clearfix
+						.categories-list__item
+							.categories-list__thumbnail
+								a(href="")
+									img(src="uploads/img/info11.png" alt="" title="").categories-list__img
+							.categories-list__title
+								h3.categories-list__title
+									a(href="#").categories-list__link Составление бизнес-планов
+						.categories-list__item
+							.categories-list__thumbnail
+								a(href="")
+									img(src="uploads/img/info8.png" alt="" title="").categories-list__img
+							.categories-list__title
+								h3.categories-list__title
+									a(href="#").categories-list__link Составление и сдача отчетности в налоговую и фонды
+						.categories-list__item
+							.categories-list__thumbnail
+								a(href="")
+									img(src="uploads/img/info3.png" alt="" title="").categories-list__img
+							.categories-list__title
+								h3.categories-list__title
+									a(href="#").categories-list__link Изготоволение печатей и&nbsp;штампов
+						.categories-list__item
+							.categories-list__thumbnail
+								a(href="")
+									img(src="uploads/img/info1.png" alt="" title="").categories-list__img
+							.categories-list__title
+								h3.categories-list__title
+									a(href="#").categories-list__link Бухгалтерское сопровождение
+		// Отзывы
+		section.section-feedback
+			.global-layout.fakebackground
+				.feedback
+					h2.feedback__title Отзывы клиентов
+					.feedback-all
+						a(href="#").feedback-all__link Все отзывы
+					.feedback-list.clearfix
+						.feedback-list__item
+							.feedback-list__photo
+								img(src="uploads/img/feedback1.png" alt="" title="").feedback-list__img
+							.feedback-list__name Роберт Мясников
+							.feedback-list__info Орловские молочные фермы
+							.feedback-list__text Огромное спасибо компании «Вектор» за столь быстрое реагирование на наши запросы. Довольны бухгалтерским сопровождением от наших партнеров. компании «Вектор» за столь быстрое реагирование на наши запросы. Довольны бухгалтерским сопровождением от наших партнеров.
+							.feedback-list__more
+								a(href="").feedback-list__link Читать полностью
+						.feedback-list__item
+							.feedback-list__photo
+								img(src="uploads/img/feedback2.png" alt="" title="").feedback-list__img
+							.feedback-list__name Эльвира Александровна
+							.feedback-list__info Индивидуальный предприниматель
+							.feedback-list__text Ребята очень быстро помогли мне в регистрации своего дела! Очень долго это было просто моим увлечением и вот теперь стало полноценной работой! Спасибо Вектору за это!
+							.feedback-list__more
+								a(href="").feedback-list__link Читать полностью
+		// СЕО-текст
+		section.section-seotext
+			.global-layout
+				.seotext
+					h2.seotext__title Копмлексное обслуживание ООО и ИП
+					.seotext__text Комплексное обслуживание ООО и ИП в Орле — одна из наших основных специализаций. Опыт, знания, выработанныегодами методы решения задач и специалисты высшего уровня – залог успешной работы вашей будущей компании. Собираетесь ли вы зарегистрировать ООО или ИП или уже являетесь владельцев своего собственного бизнеса вы получаете высококлассное обслуживание за доступные средства. А заключая договор на бухгалтерские обслуживание с нашей компанией вы будете экономить средства на зарплату штатного сотрудника, организации его рабочего места, социальных выплатах, отпусках, больничных. В своей работе по оказанию бухгалтерских и юридических услуг для бизнеса мы ориентируемся на комплексный подход к выполнению задач плодотворное сотрудничество с представителями различных компаний, сфер и структур.
+		// Меню футер
+		section.section-footer-menu
+			.global-layout
+				.footer-menu.clearfix
+					ul
+						li.footer-menu__item
+							a(href="#").footer-menu__link Бухгалтерские услуги
+						li.footer-menu__item
+							a(href="#").footer-menu__link Юридические услуги
+						li.footer-menu__item
+							a(href="#").footer-menu__link.link_hide Печати и штампы
+						li.footer-menu__item
+							a(href="#").footer-menu__link Бизнес услуги
+						li.footer-menu__item
+							a(href="#").footer-menu__link О компании
+						li.footer-menu__item
+							a(href="#").footer-menu__link Акции
+						li.footer-menu__item
+							a(href="#").footer-menu__link Контакты
+		// Футер
+		section.section-footer-info
+			.global-layout
+				.footer-info.clearfix
+					.footer-info__copyright © 2016, Компания «Вектор». Все&nbsp;права защищены.
+					.footer-contacts
+						.footer-contacts__item
+							.footer-contacts__phone (4862) 40-30-20
+							a(href="mailto:mail@vector57.ru").footer-contacts__link mail@vector57.ru
+						.footer-contacts__item
+							.footer-contacts__adress Орел, ул. Комсомольская, 66, каб. 345 (3 этаж)
+							a(href="").footer-contacts__link Схема проезда
+						.footer-contacts__item
+							.footer-contacts__social
+					.footer-dev
+						.footer-dev__devlogo
+						.footer-dev__devlink Создание сайта:<br>
+							a(href="").footer-dev__link_dev «ОрелСайтСтрой»
+
+
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+		script(src="styles/default/js-libs/owl-carousel/owl.carousel.js")
+		script(src="styles/default/js/main.js")
+
+
+
+
+
+
+

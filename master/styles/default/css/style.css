@@ -1,4 +1,5 @@
 @import url("layout.css");
+@import url("page.css");
 @import url("fonts/exo/font.css");
 @import url("fonts/ubuntu/font.css");
 @import url("fonts/bender/font.css");
@@ -53,7 +54,7 @@ h3 {
   font-weight: normal;
 }
 /* ------------- Шапка ---------------*/
-section:nth-child(1) {
+section.section-header {
   background: url("icons/dots.png");
 }
 .header-logo__img {
@@ -115,7 +116,7 @@ section:nth-child(1) {
   background: #50647f;
 }
 /* ------------- Меню ---------------*/
-section:nth-child(2) {
+section.section-menu {
   background: url("icons/dots.png");
 }
 .menu {
@@ -179,11 +180,11 @@ section:nth-child(2) {
   border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 /* ------------- Слайдер ---------------*/
-section:nth-child(3) {
+section.section-slider {
   background: url("icons/dots.png");
   position: relative;
 }
-section:nth-child(3):before {
+section.section-slider:before {
   background-image: url("img/lines.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -243,7 +244,7 @@ section:nth-child(3):before {
   color: #317fb4;
 }
 /* ---------- Осн. инфо -------------*/
-section:nth-child(4) {
+section.section-categories {
   background-image: url("img/lines.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -313,7 +314,7 @@ section:nth-child(4) {
   background: #50647f;
 }
 /* -------- Cравнение затрат ----------*/
-section:nth-child(5) {
+section.section-compare {
   background-image: url("icons/dots.png");
 }
 .compare__title {
@@ -411,7 +412,7 @@ section:nth-child(5) {
   width: 80%;
 }
 /* -------- Специалисты ----------*/
-section:nth-child(6) {
+section.section-specialists {
   background-image: url("icons/dots_dark.png");
 }
 .specialists__title {
@@ -535,7 +536,7 @@ section:nth-child(6) {
   background: #50647f;
 }
 /* ------------ Причины --------------*/
-section:nth-child(7) {
+section.section-reasons {
   background-image: url("img/lines.svg");
   background-repeat: no-repeat;
   background-position: 0 -300px;
@@ -615,7 +616,7 @@ section:nth-child(7) {
   font-family: ubuntu;
 }
 /* ------------- Отзывы --------------*/
-section:nth-child(8) {
+section.section-feedback {
   background-image: url("icons/dots.png");
 }
 .feedback__title {
@@ -861,7 +862,7 @@ section:nth-child(8) {
   margin-top: 5px;
 }
 /* ------------ СЕО-текст -------------*/
-section:nth-child(10) {
+section.section-seotext {
   background-image: url("img/seobackground.png") /*base64:skip*/;
   background-size: cover;
   background-position: center center;
@@ -890,7 +891,7 @@ section:nth-child(10) {
   font-weight: 300;
 }
 /* --------- Меню в подвале -----------*/
-section:nth-child(11):before {
+section.section-footer-menu:before {
   content: "";
   background-image: url("img/lines.svg");
   display: block;
@@ -918,7 +919,7 @@ section:nth-child(11):before {
   font-size: 16px;
 }
 /* --------- Подвал -----------*/
-section:nth-child(12) {
+section.section-footer-info {
   background: url("icons/dots.png");
   margin-top: -30px;
 }
