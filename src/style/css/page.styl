@@ -2,6 +2,11 @@ $bluecolor = #317fb4
 .active
 	color $bluecolor
 
+section.section-page
+	background url(img/lines.svg)
+	background-size contain
+	background-repeat no-repeat
+	background-position 0 20%
 .page__title
 	text-align center
 	font-family 'Bender'
@@ -221,6 +226,24 @@ $bluecolor = #317fb4
 	box-sizing border-box
 	margin-top 30px
 	margin-bottom 30px
+.page-content-text h2,h3
+	padding-top 20px
+.page-content-text img
+	width 100%
+.page-content-gallery img
+	border 1px solid #ebebeb
+	display block
+	box-sizing border-box
+	width 32%
+	float left
+	margin-right 2%
+	margin-top 10px
+	margin-bottom 10px
+.page-content-gallery img:nth-child(3n+3)
+	margin-right 0
+.novalid
+	border-color red
+
 
 
 
