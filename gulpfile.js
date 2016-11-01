@@ -92,7 +92,7 @@ gulp.task('autoprefixer', function () {
 });
 
 gulp.task('base64', function () {
-    gulp.src('master/styles/default/css/style.css')
+    gulp.src('master/styles/default/css/*.css')
          .pipe(base64({
             extensionsAllowed: ['.gif', '.png', '.jpg']
         }))
