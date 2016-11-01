@@ -54,6 +54,7 @@ html
 								a(href="#").menu__link Акции
 							li.menu__item
 								a(href="#").menu__link Контакты
+		// Контент страницы
 		section.section-page
 			.global-layout.clearfix
 				h2.page__title Изготовление печатей и штампов
@@ -100,9 +101,15 @@ html
 				.page-sidebar
 					.page-sidebar-price
 						.page-sidebar-price__title Стоимость изготовления от
-						.page-sidebar-price__price 100 ₽
+						.page-sidebar-price__price 100<span>a</span>
 					.page-sidebar-banner
-						img(src="uploads/img/banner1.png" alt="" title="").page-sidebar-banner__img
+						img(src="uploads/img/banner2.png" alt="" title="").page-sidebar-banner__img
+						.page-sidebar-banner__top
+							h2 Специальная акция
+							| до 31 декабря 2016 года
+						.page-sidebar-banner__bottom
+							h2 Приходящий бухгалтер
+							| за 500 рублей в месяц
 					.page-sidebar-garant
 						h3.page-sidebar-garant__title Время - деньги!
 						.page-sidebar-garant__day
