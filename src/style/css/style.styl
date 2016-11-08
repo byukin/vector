@@ -3,7 +3,6 @@ $bluecolor = #317fb4
 $edit = #c2fcc4
 
 @import url('layout.css')
-@import url('page.css')
 @import url('fonts/exo/font.css')
 @import url('fonts/ubuntu/font.css')
 @import url('fonts/bender/font.css')
@@ -28,18 +27,28 @@ body
 	visibility hidden
 	clear both
 }
-ul,li
-	margin 0
-	padding 0
-	list-style-type none
+hr
+	display block
+	height 0
+	visibility hidden
+	clear both
+
+/*--------------- UI ----------------*/
+
 a
 	text-decoration none
-	color #000
+	color $bluecolor
 	border-bottom none
 	padding-bottom 1px
+	border-bottom 1px solid rgba(50,127,179,0.5)
 	&:hover
 		color $bluecolor
-		border-bottom 1px solid rgba(50,127,179,0.5)
+		border-bottom 1px solid rgba(50,127,179,0.9)
+.user-content img
+	max-width: 100%;
+	width: auto;
+	margin-top 20px
+	margin-bottom 20px
 h1
 	font-size 30px;
 	line-height 36px;
@@ -52,7 +61,131 @@ h3
 	font-size 20px
 	line-height 26px
 	font-weight normal
+ul,li
+	margin 0
+	padding 0
+ol
+	margin 0
+	padding-left 15px
+ul.dash li
+	list-style-type none
+ul.dash li:before
+	content "\2014"
+	margin-right 10px
+ul.dash_blue li
+	list-style-type none
+ul.dash_blue li:before
+	content "\2014"
+	margin-right 10px
+	color $bluecolor
 
+quote
+	background #f4f4f4
+	display block
+	border-left 5px solid $bluecolor
+	padding 15px 30px 15px 30px
+	box-sizing border-box
+	margin-top 30px
+	margin-bottom 30px
+quote
+	h1,h2,h3,h4,h5,h6
+		margin-top 0
+quote.blue
+	background $bluecolor
+	display block
+	border none
+	padding 30px
+	box-sizing border-box
+	color #fff
+quote.gray
+	background #f6f6f6
+	display block
+	border none
+	padding 30px
+	box-sizing border-box
+quote.center
+	text-align center
+quote.center li
+	list-style-type none
+quote.center li:after
+	content ""
+	display block
+	width 60px
+	height 1px
+	background #ccc
+	margin 0 auto
+	margin-top 5px
+	margin-bottom 5px
+quote.center li:last-child:after
+	height 0
+quote.half
+	background #f6f6f6
+	position relative
+	display block
+	float left
+	width 48%
+	margin-top 0
+	margin-right 2%
+	border none
+	padding 30px
+	box-sizing border-box
+	&:nth-child(odd)
+		float right
+		margin-right 0
+table
+	border-collapse collapse
+	box-sizing border-box
+	font-size 14px
+	line-height 20px
+	width 100%
+	margin-top 30px
+	margin-bottom 30px
+th
+	text-align left
+	background $bluecolor
+	border 1px solid $bluecolor
+	border-right 1px solid #A7CAE0
+	color #fff
+	font-weight normal
+	box-sizing border-box
+	padding 10px
+	&:last-child
+		border-right 1px solid $bluecolor
+tr
+	border-left 1px solid #D4D4D4
+	border-right 1px solid #D4D4D4
+	&:last-child
+		border-bottom 1px solid #D4D4D4
+	&:nth-child(2n)
+		background #EDF4FA
+td
+	padding 10px
+	border-right 1px solid #D4D4D4
+
+
+
+table.gray
+	th
+		color #000
+		background #F4F4F4
+		border none
+		border-right 1px solid #E3E3E3
+		font-weight 500
+		&:last-child
+			border-right none
+	tr
+		border-left none
+		border-right none
+		&:nth-child(2n)
+			background #fff
+		&:nth-child(2n+1)
+			background #F4F4F4
+		&:last-child
+			border-bottom none
+	td
+		border-right 1px solid #D4D4D4
+		&:last-child
+			border-right none
 
 /* ------------- Шапка ---------------*/
 
@@ -64,6 +197,7 @@ section.section-header
 .header-logo__img
 	width 100px
 .header-logo__link
+	border none
 	&:hover
 		border none
 .header-description__text
@@ -124,11 +258,14 @@ section.section-menu
 	padding-top 20px
 .menu__item
 	transition-duration .4s
+	list-style-type none
 .menu__link
 	text-transform uppercase
 	font-family 'Exo 2'
 	font-weight 600
 	font-size 16px
+	border none
+	color #000
 .menu__link_hide
 	text-transform uppercase
 	font-family 'Exo 2'
@@ -160,6 +297,7 @@ section.section-menu
 	text-transform none
 	display block
 	border-bottom 1px solid rgba(255,255,255,0.4)
+	list-style-type none
 	padding 8px 15px 8px 15px
 .submenu__item:last-child
 	border none
@@ -265,6 +403,9 @@ section.section-categories
 .categories-list__title
 	font-size 16px
 	line-height 24px
+.categories-list__link
+	border none
+	color #000
 .categories-list-submit
 	border 1px solid #c7c7c7
 	height 180px
@@ -448,6 +589,7 @@ section.section-specialists
 .specialists-all__link
 	font-family 'Bender'
 	color #8ba0be
+	border none
 	font-size 12px
 	letter-spacing 2px
 	text-transform uppercase
@@ -639,6 +781,7 @@ section.section-feedback
 .feedback-all__link
 	font-family 'Bender'
 	color #8ba0be
+	border none
 	font-size 12px
 	letter-spacing 2px
 	text-transform uppercase
@@ -705,6 +848,7 @@ section.section-feedback
 .feedback-list__link
 	text-transform uppercase
 	color #8c8c8c
+	border none
 	font-weight 200
 	font-size 11px
 
@@ -766,6 +910,7 @@ section.section-feedback
 .news-all__link
 	font-family 'Bender'
 	color #8ba0be
+	border none
 	font-size 12px
 	letter-spacing 2px
 	text-transform uppercase
@@ -792,6 +937,7 @@ section.section-feedback
 	margin-left 18px
 .news-list__link
 	color $bluecolor
+	border none
 .news-list__text
 	font-weight 300
 .news-list__year
@@ -859,6 +1005,8 @@ section.section-footer-menu:before
 	font-family 'Exo 2'
 	font-weight 600
 	font-size 16px
+	color #000
+	border none
 .footer-menu__link_hide
 	text-transform uppercase
 	font-family 'Exo 2'
@@ -872,6 +1020,7 @@ section.section-footer-menu:before
 
 section.section-footer-info
 	background url(icons/dots.png)
+	min-height 100px
 	margin-top -30px
 .footer-info__copyright
 	font-weight 300
@@ -888,6 +1037,7 @@ section.section-footer-info
 .footer-contacts__link
 	color #a6d3f1
 	font-weight 300
+	border none
 	&:hover
 		color #fff
 		border-bottom 1px solid rgba(255,255,255,0.5)
@@ -895,19 +1045,248 @@ section.section-footer-info
 	width 40px
 	height 40px
 	background url(icons/vk.png)
-.footer-dev__devlogo
+.footer-dev__logo
 	background url(img/devlogo.png)
 	background-repeat no-repeat
-.footer-dev__devlink
+	width 130px
+	height 25px
+.footer-dev__info
 	font-size 13px
 	line-height 17px
 	font-weight 300
-.footer-dev__link_dev
+.footer-dev__link
 	color $bluecolor
 	font-weight 400
+	border none
+
+
+/* ----------- Страницы ------------ */
+
+section.section-page
+	background url(img/lines.svg)
+	background-size contain
+	background-repeat no-repeat
+	background-position 0 20%
+.page__title
+	text-align center
+	font-family 'Bender'
+	font-weight bold
+	margin-top 30px
+.page-content
+	width 67%
+	float left
+	margin-top 30px
+.page-content:first-of-type
+	margin-top 0
+.page-sidebar
+	width 30%
+	float right
+	margin-top 30px
+.free-consultation-form
+	background #f9f9f9
+	background-image url(icons/dots.png)
+	padding 50px 30px 50px 30px
+	box-sizing border-box
+	display block
+	margin-top 30px
+.free-consultation-form__title
+	font-family 'Exo 2'
+	font-size 26px
+	text-align center
+	color $bluecolor
+.free-consultation-form__text
+	font-weight 300
+	color #666
+	text-align center
+	margin-top 10px
+.free-consultation-form__input
+	background #fff
+	border 1px solid #dedede
+	padding 10px 10px 10px 10px
+	width 60%
+	margin 0 auto
+	display block
+	font-size 16px
+	margin-top 30px
+	&:focus
+		outline none
+.free-consultation-form__submit
+	width 200px
+	margin 0 auto
+	display block
+	font-family 'Exo 2'
+	text-transform uppercase
+	font-weight 500
+	border none
+	background $bluecolor
+	text-align center
+	padding 10px
+	font-size 16px
+	color #fff
+	border-radius 3px
+	margin-top 30px
+	margin-bottom 30px
+	cursor pointer
+	&:hover
+		background #4892C3
+	&:active
+		background #50647F
 
 
 
+.page-sidebar-price
+	background url(icons/dots_blue.png)
+	padding 30px
+	box-sizing border-box
+	text-align center
+	color #fff
+.page-sidebar-price__title
+	font-size 20px
+	font-weight 300
+.page-sidebar-price__price
+	font-weight 400
+	font-family 'Exo 2'
+	font-size 48px
+	line-height 1
+	margin-top 10px
+.page-sidebar-price__price span
+	font-family 'ALS Rubl'
+.page-sidebar-banner
+	margin-top 40px
+	width 100%
+	position relative
+	height auto
+	overflow hidden
+.page-sidebar-banner__top
+	text-align center
+	position absolute
+	width 100%
+	padding 30px
+	top 0
+	box-sizing border-box
+	font-family 'Exo 2'
+	font-size 18px
+	height 60%
+	font-weight bold
+	z-index 1
+.page-sidebar-banner__top h2
+	color $bluecolor
+	text-transform uppercase
+	font-size 24px
+	margin-bottom 0px
+	font-weight bold
+.page-sidebar-banner__bottom
+	text-align center
+	position absolute
+	width 100%
+	padding 30px
+	top 60%
+	box-sizing border-box
+	font-size 18px
+	height 40%
+	z-index 1
+	color #fff
+.page-sidebar-banner__bottom:before
+	content ""
+	position absolute
+	bottom -65px
+	left 0
+	width 100%
+	height 150%
+	z-index -1
+	opacity 0.9
+	background url(icons/dots_dark.png)
+	-moz-transform: skewY(-7deg)
+	-webkit-transform: skewY(-7deg)
+	-o-transform: skewY(-7deg)
+	-ms-transform: skewY(-7deg)
+	transform: skewY(-7deg)
+.page-sidebar-banner__bottom h2
+	color $bluecolor
+	text-transform uppercase
+	font-size 20px
+	line-height 1.2
+	margin-bottom 0px
+	font-weight bold
+	color #fff
+.page-sidebar-banner__img
+	width 100%
+.page-sidebar-garant
+	background #f6f6f6
+	padding 30px
+	text-align center
+	margin-top 40px
+	box-sizing border-box
+	font-size 22px
+	line-height 28px
+.page-sidebar-garant__title
+	font-size 19px
+	font-weight 500
+	margin-top 0px
+.page-sidebar-garant__day
+	width 140px
+	margin 0 auto
+	margin-bottom 20px
+.day-value
+	width 140px
+	height 140px
+	padding-top 10px
+	vertical-align middle
+	display table-cell
+	background url(icons/krug.png)
+	background-position center center
+	background-repeat no-repeat
+	font-family 'Exo 2'
+	font-size 52px
+	text-align center
+.page-sidebar-garant__day span
+	font-family 'Ubuntu'
+	font-size 16px
+	color #999
+	display block
+	margin-top 10px
+
+
+
+
+.page-content-tabs
+	border 1px solid #ccc
+	padding 10px 30px 10px 30px
+	margin-top 30px
+	margin-bottom 30px
+.page-content-tabs__item
+	display inline-block
+	margin-right 30px
+	list-style-type none
+.page-content-tabs__link
+	font-weight bold
+	text-transform uppercase
+	font-size 12px
+	border-bottom 1px dashed #ccc
+	&:hover
+		border-bottom 1px dashed $bluecolor
+.page-content-tabs__link.active
+	border-bottom none
+
+
+
+
+
+.gallery img
+	border 1px solid #ebebeb
+	display block
+	box-sizing border-box
+	width 32%
+	float left
+	margin-right 2%
+	margin-top 10px
+	margin-bottom 10px
+.gallery img:nth-child(3n+3)
+	margin-right 0
+
+
+.novalid
+	border-color red
 
 
 
