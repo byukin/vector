@@ -46,18 +46,6 @@ a:hover {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-/*h1
-	font-size 30px;
-	line-height 36px;
-	font-weight normal
-h2
-	font-size 30px;
-	line-height 36px;
-	font-weight normal
-h3
-	font-size 20px
-	line-height 26px
-	font-weight normal*/
 .user-content h1 {
   font-family: 'Bender';
   font-weight: bold;
@@ -402,10 +390,6 @@ a.xml_icon:after {
   content: "";
   display: block;
   height: 15px;
-}
-input[type="checkbox"] {
-  border: 1px solid #f00;
-  background: #f00;
 }
 /* ------------- Шапка ---------------*/
 section.section-header {
