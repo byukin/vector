@@ -624,6 +624,18 @@ section.section-categories {
   padding: 15px;
   box-sizing: border-box;
 }
+.categories-list__thumbnail {
+  position: relative;
+}
+.categories-list__special {
+  position: absolute;
+  z-index: 100;
+  background: url("icons/special.png");
+  width: 78px;
+  height: 78px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .categories-list__img {
   width: 100%;
   height: auto;
