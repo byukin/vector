@@ -1114,18 +1114,20 @@ section.section-feedback {
   text-overflow: ellipsis;
 }
 .feedback-list__more {
+  background: none;
   border: 1px solid #ccc;
-  padding: 3px 13px 3px 13px;
-  display: inline-block;
+  padding: 10px 15px 10px 15px;
   margin-left: 165px;
   margin-top: 15px;
   cursor: pointer;
+  text-transform: uppercase;
+  color: #8c8c8c;
+  font-weight: 200;
+  font-size: 11px;
 }
 .feedback-list__more:hover {
   background: #317fb4;
   border-color: #317fb4;
-}
-.feedback-list__more:hover .feedback-list__link {
   color: #fff;
 }
 .feedback-list__link {
@@ -1134,6 +1136,13 @@ section.section-feedback {
   border: none;
   font-weight: 200;
   font-size: 11px;
+}
+/*------------ Отзыв в fancybox ---------*/
+.fancybox-inner .feedback-list__more {
+  display: none;
+}
+.fancybox-inner .feedback-list__text {
+  overflow: visible;
 }
 /* ------------- Новости --------------*/
 .news__title {

@@ -1005,23 +1005,34 @@ section.section-feedback
 	overflow hidden
 	text-overflow ellipsis
 .feedback-list__more
+	background none
 	border 1px solid #ccc
-	padding 3px 13px 3px 13px
-	display inline-block
+	padding 10px 15px 10px 15px
 	margin-left 165px
 	margin-top 15px
 	cursor pointer
+	text-transform uppercase
+	color #8c8c8c
+	font-weight 200
+	font-size 11px
 	&:hover
 		background $bluecolor
 		border-color $bluecolor
-		.feedback-list__link
-			color #fff
+		color #fff
 .feedback-list__link
 	text-transform uppercase
 	color #8c8c8c
 	border none
 	font-weight 200
 	font-size 11px
+
+/*------------ Отзыв в fancybox ---------*/
+
+.fancybox-inner
+	.feedback-list__more
+		display none
+	.feedback-list__text
+		overflow visible
 
 
 
